@@ -38,3 +38,4 @@ org.skriptlang.skript.lang.experiment
 org.skriptlang.skript.lang.script
 org.skriptlang.skript.lang.structure
 org.skriptlang.skript.lang.util
+org.skriptlang.skript.util.event

@@ -1,17 +1,17 @@
 {
-  "skriptVersion" : "3.0.0-Beta1",
+  "skriptVersion" : "3.0.0-Beta2",
 
   "classes" : [
     {
-  "id" : "attributetype",
-  "name" : "Attribute Type",
+  "id" : "attribute",
+  "name" : "Attribute",
   "patterns" : [
     "armor, armor toughness, attack damage, attack knockback, attack speed, block break speed, block interaction range, burning time, entity interaction range, explosion knockback resistance, fall damage multiplier, flying speed, follow range, gravity, jump strength, knockback resistance, luck, max absorption, max health, mining efficiency, movement efficiency, movement speed, oxygen bonus, safe fall distance, scale, sneaking speed, spawn reinforcements, step height, submerged mining speed, sweeping damage ratio, tempt range, water movement efficiency",
 
     "pattern_end"
   ],
   "since" : "2.5",
-  "description" : "Represents the type of an attribute. Note that this type does not contain any numerical values.See <a href='https://minecraft.wiki/w/Attribute#Attributes'>attribute types</a> for more info.\\nNOTE: Minecraft namespaces are supported, ex: 'minecraft:generic.attack_damage'.",
+  "description" : "Represents an attribute.\\nNote that this type does not contain any numerical values.\\nSee <a href='https://minecraft.wiki/w/Attribute#Attributes'>attributes</a> for more info.\\nThese are auto-generated and may differ between MC versions.\\nNOTE: Minecraft namespaces and underscores are supported, ex: 'minecraft:attack_damage'.",
   "examples" : "Missing examples."
 },
 {
@@ -211,7 +211,7 @@
   "id" : "entitycategory",
   "name" : "Entity Category",
   "patterns" : [
-    "abstract arrow, ageable, ambient, animal, boat, boss, breedable, bucketable, chest boat, creature, damageable, display, enemy, entity, explosive, fish, flying, golem, hanging, illager, minecart, mob, monster, projectile, raider, schoolable fish, shearable, spellcaster, tameable, throwable projectile, vehicle, water mob",
+    "abstract arrow, ageable, ambient, animal, boat, boss, bucketable, breedable, chest boat, creature, damageable, display, enemy, entity, explosive, fish, flying, golem, hanging, illager, minecart, mob, monster, projectile, raider, schoolable fish, shearable, spellcaster, tameable, throwable projectile, vehicle, water mob",
 
     "pattern_end"
   ],
@@ -1492,6 +1492,26 @@ Hands are raised when an entity is using an item (eg: blocking, drawing a bow, e
   "examples" : "on damage of player:\\n    if victim's main hand is raised:\\n        drop player's tool at player\\n        set player's tool to air"
 },
 {
+  "id" : "CondItemInHand",
+  "name" : "Is Holding",
+  "patterns" : [
+    "[%<a href='./classes.html#livingentity'>living entities</a>%] ha(s|ve) %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in [main] hand",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (is|are) holding %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% [in main hand]",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] ha(s|ve) %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in off[(-| )]hand",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (is|are) holding %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in off[(-| )]hand",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (ha(s|ve) not|do[es]n't have) %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in [main] hand",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (is not|isn't) holding %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% [in main hand]",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (ha(s|ve) not|do[es]n't have) %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in off[(-| )]hand",
+"[%<a href='./classes.html#livingentity'>living entities</a>%] (is not|isn't) holding %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% in off[(-| )]hand",
+
+    "pattern_end"
+  ],
+  "since" : "1.0",
+  "description" : "Checks whether a player is holding a specific Material/ItemStack.
+Cannot be used with endermen, use 'entity is [not] an enderman holding &lt;item type&gt;' instead.",
+  "examples" : "player is holding a stick\\nvictim isn't holding a sword of sharpness"
+},
+{
   "id" : "CondIncendiary",
   "name" : "Is Incendiary",
   "patterns" : [
@@ -2440,7 +2460,7 @@ If the command is a bungeecord side command, you can use the [bungeecord] option
   "id" : "EffEnchant",
   "name" : "Enchant/Disenchant",
   "patterns" : [
-    "enchant %~<a href='./classes.html#itemstack'>item stacks</a>% with %<a href='./classes.html#enchantment'>enchantment</a>% %<a href='./classes.html#number'>number</a>%",
+    "enchant %~<a href='./classes.html#itemstack'>item stacks</a>% with %<a href='./classes.html#enchantment'>enchantment</a>% [%<a href='./classes.html#number'>number</a>%]",
 "disenchant %~<a href='./classes.html#itemstack'>item stacks</a>%",
 
     "pattern_end"
@@ -6214,6 +6234,19 @@ Supported types include <a href='./classes.html#number'>numbers</a>, <a href='./
   "examples" : "if the distance between the player and {home::%uuid of player%} is smaller than 20:\\n    message \"You're very close to your home!\""
 },
 {
+  "id" : "ExprDrops",
+  "name" : "Drops",
+  "patterns" : [
+    "[the] drops",
+
+    "pattern_end"
+  ],
+  "since" : "1.0",
+  "description" : "Only works in death events.
+Holds the drops of the dying creature. Drops can be prevented by removing them with \"remove ... from drops\" or \"clear drops\" if you don't want any drops at all.",
+  "examples" : "clear drops\\nremove itemstack of 4 of oak planks from the drops"
+},
+{
   "id" : "ExprDropsOfBlock",
   "name" : "Drops Of Block",
   "patterns" : [
@@ -6344,10 +6377,8 @@ To change the number of levels removed, use the enchant event.",
   "id" : "ExprEntities",
   "name" : "Entities",
   "patterns" : [
-    "[(all [[of] the]|the)] entities [(in|of) ([world[s]] %<a href='./classes.html#world'>worlds</a>%|%<a href='./classes.html#chunk'>chunks</a>%)]",
-"[(all [[of] the]|the)] entities of type[s] %*-entitytypes/<a href='./classes.html#entitycategory'>entity categories</a>% [(in|of) ([world[s]] %<a href='./classes.html#world'>worlds</a>%|%<a href='./classes.html#chunk'>chunks</a>%)]",
-"[(all [[of] the]|the)] entities (within|[with]in radius) %<a href='./classes.html#number'>number</a>% [(block[s]|met(er|re)[s])] (of|around) %<a href='./classes.html#location'>location</a>%",
-"[(all [[of] the]|the)] entities of type[s] %<a href='./classes.html#entitytype'>entity types</a>/<a href='./classes.html#entitycategory'>entity categories</a>% in radius %<a href='./classes.html#number'>number</a>% (of|around) %<a href='./classes.html#location'>location</a>%",
+    "all [[of] the] [entities of type[s]] %*-entitytypes/<a href='./classes.html#entitycategory'>entity categories</a>% [(in|of) ([world[s]] %<a href='./classes.html#world'>worlds</a>%|%<a href='./classes.html#chunk'>chunks</a>%)]",
+"all [[of] the] [entities of type[s]] %<a href='./classes.html#entitytype'>entity types</a>/<a href='./classes.html#entitycategory'>entity categories</a>% in radius %<a href='./classes.html#number'>number</a>% (of|around) %<a href='./classes.html#location'>location</a>%",
 
     "pattern_end"
   ],
@@ -6372,8 +6403,8 @@ To change the number of levels removed, use the enchant event.",
   "id" : "ExprEntityAttribute",
   "name" : "Entity Attribute",
   "patterns" : [
-    "[the] %<a href='./classes.html#attributetype'>attribute type</a>% [((total|final|modified))] attribute [value] of %<a href='./classes.html#entity'>entities</a>%",
-"%<a href='./classes.html#entity'>entities</a>%'[s] %<a href='./classes.html#attributetype'>attribute type</a>% [((total|final|modified))] attribute [value]",
+    "[the] %<a href='./classes.html#attribute'>attribute</a>% [((total|final|modified))] attribute [value] of %<a href='./classes.html#entity'>entities</a>%",
+"%<a href='./classes.html#entity'>entities</a>%'[s] %<a href='./classes.html#attribute'>attribute</a>% [((total|final|modified))] attribute [value]",
 
     "pattern_end"
   ],
@@ -7093,6 +7124,18 @@ NOTE: 'Viewers' expression returns a list of players viewing the inventory. Note
   "examples" : "if slot 1 of player is set:\\n    set slot 0 of player to itemstack of 2 of stone\\n    clear slot 1 of player"
 },
 {
+  "id" : "ExprItem",
+  "name" : "Item",
+  "patterns" : [
+    "[the] item[stack]",
+
+    "pattern_end"
+  ],
+  "since" : "<i>unknown</i> (before 2.1)",
+  "description" : "The item involved in an event, e.g. in a drop, dispense, pickup or craft event.",
+  "examples" : "on dispense:\\n    item is a clock\\n    set the time to 6:00"
+},
+{
   "id" : "ExprItemAmount",
   "name" : "Item Amount",
   "patterns" : [
@@ -7163,6 +7206,18 @@ Deleting the item of an ItemFrame will just remove the ItemStack from the frame 
   "examples" : "give player a diamond sword with custom model data 2\\nset slot 1 of inventory of player to wooden hoe with custom model data 357"
 },
 {
+  "id" : "ExprItemStackWithEnchantment",
+  "name" : "Item with Enchantment",
+  "patterns" : [
+    "%<a href='./classes.html#itemstack'>item stack</a>% (enchanted with|with enchantment) %<a href='./classes.html#enchantment'>enchantment</a>%[ %<a href='./classes.html#number'>number</a>%]",
+
+    "pattern_end"
+  ],
+  "since" : "3.0.0",
+  "description" : "Add an enchantment to an ItemStack.",
+  "examples" : "set {_i} to itemstack of diamond sword enchanted with unbreaking 3"
+},
+{
   "id" : "ExprItemWithLore",
   "name" : "Item with Lore",
   "patterns" : [
@@ -7176,7 +7231,7 @@ If multiple strings are passed, each of them will be a separate line in the lore
   "examples" : "set {_test} to stone with lore \"line 1\" and \"line 2\"\\ngive {_test} to player"
 },
 {
-  "id" : "ExprItemStackCreate",
+  "id" : "ExprSecItemStackCreate",
   "name" : "ItemStack Create",
   "patterns" : [
     "[new] item[ ]stack[s] (of|from) [%<a href='./classes.html#number'>number</a>% [of]] %<a href='./classes.html#material'>materials</a>%",
@@ -7184,8 +7239,9 @@ If multiple strings are passed, each of them will be a separate line in the lore
     "pattern_end"
   ],
   "since" : "3.0.0",
-  "description" : "Create a new item stack.",
-  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel"
+  "description" : "Create a new item stack.
+This can be used as an expression as well as a section.",
+  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel\\n\\n# Section\\nset {_i} to itemstack of diamond sword\\n    set name of item to \"My Sword\"\\n    set custom model data of item to 1010\\ngive {_i} to player"
 },
 {
   "id" : "ExprItemsIn",
@@ -8623,7 +8679,7 @@ or can be reset to the default icon in a <a href='events.html#server_list_ping'>
   ],
   "since" : "1.0 pre-5, 2.7 (classinfo)",
   "description" : "Returns a list of all the values of a type. Useful for looping.",
-  "examples" : "loop all attribute types:\\n    set loop-value attribute of player to 10\\n    message \"Set attribute %loop-value% to 10!\""
+  "examples" : "loop all attributes:\\n    set loop-value attribute of player to 10\\n    message \"Set attribute %loop-value% to 10!\""
 },
 {
   "id" : "ExprShooter",
