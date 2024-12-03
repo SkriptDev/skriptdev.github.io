@@ -1,5 +1,5 @@
 {
-  "skriptVersion" : "3.0.0-Beta2",
+  "skriptVersion" : "3.0.0-Beta3",
 
   "classes" : [
     {
@@ -23,8 +23,8 @@
     "pattern_end"
   ],
   "since" : "1.4.4",
-  "description" : "All possible biomes Minecraft uses to generate a world.\\nNOTE: Minecraft namespaces are supported, ex: 'minecraft:basalt_deltas'.",
-  "examples" : "biome at the player is desert"
+  "description" : "All possible biomes Minecraft uses to generate a world.\\nNOTE: Minecraft namespaces are supported, ex: 'minecraft:basalt_deltas'.\\nAs of Paper 1.21.3, custom biomes are also supported.",
+  "examples" : "biome at the player is desert\\nset biome of block at player to my_pack:super_swamp"
 },
 {
   "id" : "block",
@@ -42,7 +42,8 @@
   "id" : "blockdata",
   "name" : "Block Data",
   "patterns" : [
-    "Missing patterns.",
+    "block_type[state=value]",
+"minecraft:block_type[state=value]",
 
     "pattern_end"
   ],
@@ -83,14 +84,14 @@
     "pattern_end"
   ],
   "since" : "2.0",
-  "description" : "A chunk is a cuboid of 16×16×128 (x×z×y) blocks. Chunks are spread on a fixed rectangular grid in their world.",
-  "examples" : "Missing examples."
+  "description" : "A chunk is a cuboid of 16×16×(world height) (x×z×y) blocks.\\nChunks are spread on a fixed rectangular grid in their world.",
+  "examples" : "set {_c} to chunk at player"
 },
 {
   "id" : "clicktype",
   "name" : "Click Type",
   "patterns" : [
-    "creative action, double click using mouse, drop key, drop key with control, left mouse button, left mouse button with shift, middle mouse button, number key, right mouse button, right mouse button with shift, swap offhand, unknown, window border using left mouse button, window border using right mouse button",
+    "0-9, border using lmb, border using rmb, creative action, ctrl+q, custom, double click, double click using mouse, drop item, drop key, drop key with control, drop stack, left mouse, left mouse button, left mouse button with shift, left mouse with shift, lmb, middle mouse, middle mouse button, mmb, number key, q, right mouse, right mouse button, right mouse button with shift, right mouse with shift, rmb, shift+lmb, shift+rmb, swap offhand, swap shield, unknown, unsupported, window border using left mouse button, window border using right mouse, window border using right mouse, window border using right mouse button",
 
     "pattern_end"
   ],
@@ -127,7 +128,7 @@
   "id" : "damagecause",
   "name" : "Damage Cause",
   "patterns" : [
-    "attack, block explosion, burning, campfire, contact, cramming, dragon's breath, drowning, dryout, entity explosion, fall, falling block, fire, freeze, hitting wall while flying, kill, lava, lightning, magma, melting, poison, potion, projectile, sonic boom, starvation, suffocation, suicide, sweep attack, thorns, unknown, void, wither, world border",
+    "a block explosion, a fall, a falling block, a fire, a lightning, a lightning strike, a plugin, a potion, a projectile, a wither, an attack, an entity attack, an entity explosion, attack, block explosion, burn, burning, campfire, contact, cramming, custom, dragon's breath, dragonfire, drown, drowning, dryout, entity attack, entity explosion, fall, falling block, fire, flying into a wall, freeze, hitting wall while flying, hot floor, kill, killed, lava, lightning, lightning strike, magma, melt, melting, plugin, poison, potion, projectile, sonic boom, starvation, suffocate, suffocation, suicide, sweep attack, sweeping, the void, thorns, unknown, void, wither, wither effect, wither potion effect, world border",
 
     "pattern_end"
   ],
@@ -151,7 +152,7 @@
   "id" : "difficulty",
   "name" : "Difficulty",
   "patterns" : [
-    "easy, hard, medium, peaceful",
+    "easy, hard, medium, normal, peaceful",
 
     "pattern_end"
   ],
@@ -175,13 +176,13 @@
   "id" : "enchantment",
   "name" : "Enchantment",
   "patterns" : [
-    "aqua affinity, bane of arthropods, binding curse, blast protection, breach, channeling, density, depth strider, efficiency, feather falling, fire aspect, fire protection, flame, fortune, frost walker, impaling, infinity, knockback, looting, loyalty, luck of the sea, lure, mending, multishot, piercing, power, projectile protection, protection, punch, quick charge, respiration, riptide, sharpness, silk touch, smite, soul speed, sweeping edge, swift sneak, thorns, unbreaking, vanishing curse, wind burst",
+    "aqua affinity, bane of arthropods, blast protection, breach, channeling, curse of binding, curse of vanishing, density, depth strider, efficiency, feather falling, fire aspect, fire protection, flame, fortune, frost walker, impaling, infinity, knockback, looting, loyalty, luck of the sea, lure, mending, multishot, piercing, power, projectile protection, protection, punch, quick charge, respiration, riptide, sharpness, silk touch, smite, soul speed, sweeping edge, swift sneak, thorns, unbreaking, wind burst",
 
     "pattern_end"
   ],
   "since" : "1.4.6",
   "description" : "Represents an enchantment, e.g. 'sharpness' or 'fortune'.\\nNOTE: Minecraft namespaces are supported, ex: 'minecraft:vanishing_curse'.\\nAs of Minecraft 1.21 this will also support custom enchantments using namespaces, ex: 'myenchants:explosive'.",
-  "examples" : "Missing examples."
+  "examples" : "enchant player's tool with sharpness 10\\nenchant player's tool with my_pack:flying 4"
 },
 {
   "id" : "enchantmentoffer",
@@ -199,7 +200,7 @@
   "id" : "entity",
   "name" : "Entity",
   "patterns" : [
-    "player, op, wolf, tamed ocelot, powered creeper, zombie, unsaddled pig, fireball, arrow, dropped item, item frame, etc.",
+    "entity, event-entity, player, event-player",
 
     "pattern_end"
   ],
@@ -235,7 +236,7 @@
   "id" : "equipmentslot",
   "name" : "Equipment Slot",
   "patterns" : [
-    "body, chest, feet, hand, head, legs, off hand",
+    "body, boots, chest, chestplate, feet, hand, head, helmet, leggings, legs, off hand, pants, shield, tool",
 
     "pattern_end"
   ],
@@ -259,7 +260,7 @@
   "id" : "FireworkType",
   "name" : "Firework Type",
   "patterns" : [
-    "ball, burst, creeper, large ball, star",
+    "ball, ball large, burst, creeper, creeper face, large, large ball, small, small ball, star, star shaped",
 
     "pattern_end"
   ],
@@ -281,33 +282,21 @@
 },
 {
   "id" : "gamerule",
-  "name" : "Gamerule",
+  "name" : "GameRule",
   "patterns" : [
-    "tntExplosionDropDecay, globalSoundEvents, enderPearlsVanishOnDeath, doFireTick, maxCommandChainLength, doVinesSpread, disableElytraMovementCheck, lavaSourceConversion, commandBlockOutput, forgiveDeadPlayers, playersNetherPortalCreativeDelay, doMobSpawning, maxEntityCramming, universalAnger, playersSleepingPercentage, snowAccumulationHeight, doImmediateRespawn, blockExplosionDropDecay, naturalRegeneration, doMobLoot, fallDamage, doEntityDrops, randomTickSpeed, playersNetherPortalDefaultDelay, spawnRadius, freezeDamage, sendCommandFeedback, doWardenSpawning, fireDamage, reducedDebugInfo, waterSourceConversion, projectilesCanBreakBlocks, announceAdvancements, drowningDamage, spawnChunkRadius, disableRaids, doWeatherCycle, mobExplosionDropDecay, doDaylightCycle, showDeathMessages, doTileDrops, doInsomnia, keepInventory, disablePlayerMovementCheck, doLimitedCrafting, mobGriefing, doTraderSpawning, commandModificationBlockLimit, logAdminCommands, minecartMaxSpeed, spectatorsGenerateChunks, doPatrolSpawning, maxCommandForkCount",
+    "announceAdvancements, blockExplosionDropDecay, commandBlockOutput, commandModificationBlockLimit, disableElytraMovementCheck, disablePlayerMovementCheck, disableRaids, doDaylightCycle, doEntityDrops, doFireTick, doImmediateRespawn, doInsomnia, doLimitedCrafting, doMobLoot, doMobSpawning, doPatrolSpawning, doTileDrops, doTraderSpawning, doVinesSpread, doWardenSpawning, doWeatherCycle, drowningDamage, enderPearlsVanishOnDeath, fallDamage, fireDamage, forgiveDeadPlayers, freezeDamage, globalSoundEvents, keepInventory, lavaSourceConversion, logAdminCommands, maxCommandChainLength, maxCommandForkCount, maxEntityCramming, minecartMaxSpeed, mobExplosionDropDecay, mobGriefing, naturalRegeneration, playersNetherPortalCreativeDelay, playersNetherPortalDefaultDelay, playersSleepingPercentage, projectilesCanBreakBlocks, randomTickSpeed, reducedDebugInfo, sendCommandFeedback, showDeathMessages, snowAccumulationHeight, spawnChunkRadius, spawnRadius, spectatorsGenerateChunks, tntExplosionDropDecay, universalAnger, waterSourceConversion",
 
     "pattern_end"
   ],
   "since" : "2.5",
-  "description" : "A gamerule",
-  "examples" : "Missing examples."
-},
-{
-  "id" : "gamerulevalue",
-  "name" : "Gamerule Value",
-  "patterns" : [
-    "Missing patterns.",
-
-    "pattern_end"
-  ],
-  "since" : "2.5",
-  "description" : "A wrapper for the value of a gamerule for a world.",
+  "description" : "Represents a GameRule for a world.",
   "examples" : "Missing examples."
 },
 {
   "id" : "gene",
   "name" : "Gene",
   "patterns" : [
-    "aggressive, brown, lazy, normal, playful, weak, worried",
+    "aggressive, brown, brownish, happy, lazy, normal, playful, savage, weak, wild, worried, worrisome",
 
     "pattern_end"
   ],
@@ -319,7 +308,7 @@
   "id" : "healreason",
   "name" : "Heal Reason",
   "patterns" : [
-    "eating, end crystal, magic, magic regen, peaceful regeneration, satiated, unknown, wither spawning, withering",
+    "a healing potion, a magic regen, a magic regeneration, a plugin, a potion, a regen potion, a regeneration potion, a wither effect, a wither spawn, a wither spawning, a wither summoning, an end crystal, an ender crystal, consuming, custom, eating, end crystal, ender crystal, fed, healing potion, ingesting, magic, magic regen, magic regeneration, peaceful, peaceful regen, peaceful regeneration, plugin, potion, regen potion, regeneration potion, sated, satiated, satisfied, unknown, wither, wither effect, wither potion, wither spawn, wither spawning, wither summoning, withered, withering",
 
     "pattern_end"
   ],
@@ -337,13 +326,13 @@
   ],
   "since" : "1.0",
   "description" : "An inventory of a <a href='#player'>player</a> or <a href='#block'>block</a>. Inventories have many effects and conditions regarding the items contained.\\nAn inventory has a fixed amount of <a href='#slot'>slots</a> which represent a specific place in the inventory, e.g. the <a href='expressions.html#ExprArmorSlot'>helmet slot</a> for players (Please note that slot support is still very limited but will be improved eventually).",
-  "examples" : "Missing examples."
+  "examples" : "set {_inv} to inventory of player\\nadd itemstack of diamond to inventory of target player"
 },
 {
   "id" : "inventoryaction",
   "name" : "Inventory Action",
   "patterns" : [
-    "clone stack, collect to cursor, drop all from cursor, drop all from slot, drop one from cursor, drop one from slot, hotbar move and readd, instant move, nothing, pickup all, pickup half, pickup one item, pickup some, place all, place one, place some, swap with cursor, swap with hotbar, unknown",
+    "clone stack, collect items to cursor, collect to cursor, custom, do nothing, drop all from cursor, drop all from slot, drop cursor, drop cursor item, drop cursor stack, drop items from cursor, drop items from slot, drop one from cursor, drop one from slot, drop one item from cursor, drop one item from slot, drop single item from cursor, drop single item from slot, drop slot, drop slot item, drop slot stack, drop stack from cursor, drop stack from cursor, drop stack from slot, drop stack from slot, hotbar move and readd, hotbar swap, hotbar swap items, instant move, move to other inventory, nothing, pickup all, pickup all items, pickup half, pickup half stack, pickup one item, pickup single, pickup single item, pickup some, pickup some items, place all, place all items, place one, place one item, place some, place some items, shift move, swap cursor, swap cursor stack, swap items with hotbar, swap stack with cursor, swap with cursor, swap with hotbar, unknown, unsupported",
 
     "pattern_end"
   ],
@@ -355,7 +344,7 @@
   "id" : "inventoryclosereason",
   "name" : "Inventory Close Reasons",
   "patterns" : [
-    "can't use, death, disconnected, open new, player, plugin, teleport, unknown, unloaded",
+    "can not use, can't use, cannot use, death, disconnect, disconnected, new opened, open new, player, plugin, teleport, unknown, unloaded",
 
     "pattern_end"
   ],
@@ -367,7 +356,7 @@
   "id" : "inventorytype",
   "name" : "Inventory Type",
   "patterns" : [
-    "anvil inventory, barrel inventory, beacon inventory, blast furnace inventory, brewing stand inventory, cartography table inventory, chest inventory, chiseled bookshelf, composter inventory, crafter inventory, crafting table inventory, creative inventory, decorated pot, dispenser inventory, dropper inventory, enchanting table inventory, ender chest inventory, furnace inventory, grindstone inventory, hopper inventory, jukebox, lectern inventory, loom inventory, merchant inventory, new smithing table, player inventory, shulker box inventory, smithing inventory, smoker inventory, stonecutter inventory, workbench inventory",
+    "a barrel inventory, a beacon inventory, a blast furnace inventory, a bookshelf, a brewing stand inventory, a cartography table inventory, a chest inventory, a chiseled bookshelf, a composter inventory, a crafter inventory, a crafting table inventory, a creative inventory, a decorated pot, a dispenser inventory, a dropper inventory, a furnace inventory, a grindstone inventory, a hopper inventory, a jukebox, a lectern inventory, a loom inventory, a merchant inventory, a new smithing table, a player inventory, a shulker box inventory, a smithing inventory, a smoker inventory, a stonecutter inventory, a upgrade gear, a upgrade gear table, a villager inventory, a workbench inventory, an anvil inventory, an enchanting table inventory, an ender chest inventory, anvil inventory, barrel inventory, beacon inventory, blast furnace inventory, bookshelf, brewing stand inventory, cartography table inventory, chest inventory, chiseled bookshelf, composter inventory, crafter inventory, crafting table inventory, creative inventory, decorated pot, dispenser inventory, dropper inventory, enchanting table inventory, ender chest inventory, furnace inventory, grindstone inventory, hopper inventory, jukebox, lectern inventory, loom inventory, merchant inventory, new smithing table, player inventory, shulker box inventory, smithing inventory, smoker inventory, stonecutter inventory, upgrade gear, upgrade gear table, villager inventory, workbench inventory",
 
     "pattern_end"
   ],
@@ -435,18 +424,6 @@
   "since" : "2.2-dev36",
   "description" : "Something that can hold metadata (e.g. an entity or block)",
   "examples" : "set metadata value \"super cool\" of player to true"
-},
-{
-  "id" : "money",
-  "name" : "Money",
-  "patterns" : [
-    "&lt;number&gt; $ or $ &lt;number&gt;, where '$' is your server's currency, e.g. '10 rupees' or '£5.00'",
-
-    "pattern_end"
-  ],
-  "since" : "2.0",
-  "description" : "A certain amount of money. Please note that this differs from <a href='#number'>numbers</a> as it includes a currency symbol or name, but usually the two are interchangeable, e.g. you can both <code>add 100$ to the player's balance</code> and <code>add 100 to the player's balance</code>.",
-  "examples" : "add 10£ to the player's account\\nremove Fr. 9.95 from the player's money\\nset the victim's money to 0\\nincrease the attacker's balance by the level of the victim * 100"
 },
 {
   "id" : "moonphase",
@@ -548,7 +525,7 @@
   "id" : "quitreason",
   "name" : "Quit Reason",
   "patterns" : [
-    "disconnected, erroneous, kicked, timed out",
+    "disconnected, erroneous, erroneous state, kicked, quit, timed out",
 
     "pattern_end"
   ],
@@ -557,22 +534,10 @@
   "examples" : "Missing examples."
 },
 {
-  "id" : "region",
-  "name" : "Region",
-  "patterns" : [
-    ""region name"",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "A region of a regions plugin. Skript currently supports WorldGuard, Factions, GriefPrevention and PreciousStones.\\nPlease note that some regions plugins do not have named regions, some use numerical ids to identify regions, and some may have regions with the same name in different worlds, thus using regions like \"region name\" in scripts may or may not work.",
-  "examples" : "Missing examples."
-},
-{
   "id" : "resourcepackstate",
   "name" : "Resource Pack State",
   "patterns" : [
-    "accept, decline, discarded, download fail, downloaded, failed reload, invalid url, successfully load",
+    "accept, accepted, decline, declined, discarded, download fail, downloaded, fail, failed, failed reload, failed to download, failed to reload, invalid url, refuse, refused, reject, rejected, success, successfully install, successfully installed, successfully load, successfully loaded",
 
     "pattern_end"
   ],
@@ -596,7 +561,7 @@
   "id" : "soundcategory",
   "name" : "Sound Category",
   "patterns" : [
-    "ambient category, block category, hostile category, master category, music category, neutral category, player category, record category, voice category, weather category",
+    "ambient category, block category, blocks category, environment category, friendly creature category, friendly creatures category, friendly mob category, friendly mobs category, hostile category, hostile creature category, hostile creatures category, hostile mob category, hostile mobs category, jukebox category, jukeboxes category, master category, master volume category, music category, neutral category, note block category, note blocks category, noteblock category, noteblocks category, player category, players category, record category, records category, speech category, voice category, weather category",
 
     "pattern_end"
   ],
@@ -608,7 +573,7 @@
   "id" : "spawnreason",
   "name" : "Spawn Reason",
   "patterns" : [
-    "beehive, breed, built iron golem, built snowman, built wither, chunk generation, command, cured, customized, default, dispense egg, drowned, duplication, egg, enchantment, ender pearl, explosion, frozen, infection, jockey, lightning, metamorphosis, mob spawner, mount, natural, nether portal, ocelot baby, ominous item spawner, patrol, perching, piglin zombification, potion effect, raid, reinforcements, shear, silverfish reveal, slime split, spawn egg, spell, trap, trial spawner, village defense, village invasion",
+    "beehive, breed, breeding, build iron golem, build snowman, build wither, built iron golem, built snowman, built wither, chunk generation, command, creature spawner, cured, custom, customised, customized, default, dispense egg, dispensing egg, drowned, duplication, egg, enchantment, ender pearl, explosion, frozen, golem defense, infected, infection, iron golem defense, jockey, lightning, metamorphosis, mob spawner, mount, natural, nether portal, ocelot baby, ominous item spawner, patrol, perching, piglin zombification, potion effect, raid, reinforcements, shear, sheared, shoulder, silverfish reveal, silverfish trap, slime split, spawn egg, spawner, spell, trap, trial creature spawner, trial mob spawner, trial spawner, village defense, village invading, village invasion",
 
     "pattern_end"
   ],
@@ -620,7 +585,7 @@
   "id" : "teleportcause",
   "name" : "Teleport Cause",
   "patterns" : [
-    "chorus, command, dismount, end portal, ender pearl, exit bed, gateway, nether portal, plugin, spectate, unknown",
+    "bed exit, chorus, chorus fruit, command, dismount, dismounted, end gateway, end portal, ender gateway, ender pearl, ender portal, exit bed, exiting bed, gateway, nether portal, plugin, spectate, spectator, unknown",
 
     "pattern_end"
   ],
@@ -686,7 +651,7 @@
   "id" : "transformreason",
   "name" : "Transform Reason",
   "patterns" : [
-    "entity drowning, entity freezing, infection, lightning, mooshroom shear, piglin zombification, slime split, tadpole converting, unknown, zombie cure",
+    "creeper super charge, curing, drowning, entity drowning, entity freeze, entity freezing, infection, lightning, magma slime split, magma slime splitting, metamorphosis, mooshroom shear, mooshroom shearing, piglin zombification, skeleton converting to stray, skeleton freeze, skeleton freezing, slime split, slime splitting, split, tadpole converting, tadpole converting to frog, tadpole metamorphosis, unknown, villager infection, zombie converting to drowned, zombie cure, zombie curing, zombie drowning",
 
     "pattern_end"
   ],
@@ -698,7 +663,7 @@
   "id" : "treetype",
   "name" : "Tree Type",
   "patterns" : [
-    "acacia tree, azalea tree, big oak tree, birch tree, brown mushroom, cherry tree, chorus plant, cocoa tree, crimson fungus, dark oak tree, jungle bush, jungle tree, mangrove tree, mega pine tree, mega spruce tree, oak tree, pale oak creaking tree, pale oak tree, red mushroom, small jungle tree, spruce tree, swamp tree, tall birch tree, tall mangrove tree, tall spruce tree, warped fungus",
+    "acacia, acacia tree, azalea, azalea tree, big oak tree, birch, birch tree, brown mushroom, cherry, cherry tree, chorus plant, cocoa tree, crimson fungus, dark oak, dark oak tree, jungle, jungle bush, jungle tree, mangrove, mangrove tree, mega pine, mega pine tree, mega redwood, mega spruce, mega spruce tree, oak tree, pale oak, pale oak creaking, pale oak creaking tree, pale oak tree, red mushroom, redwood, small jungle, small jungle tree, spruce tree, swamp, swamp tree, tall birch, tall birch tree, tall mangrove, tall mangrove tree, tall redwood, tall redwood tree, tall spruce tree, tree, tree, warped fungus",
 
     "pattern_end"
   ],
@@ -717,6 +682,18 @@
   "since" : "2.0",
   "description" : "Represents a type, e.g. number, object, item type, location, block, world, entity type, etc.\\nThis is mostly used for expressions like 'event-&lt;type&gt;', '&lt;type&gt;-argument', 'loop-&lt;type&gt;', etc., e.g. event-world, number-argument and loop-player.",
   "examples" : "{variable} is a number # check whether the variable contains a number, e.g. -1 or 5.5\\n{variable} is a type # check whether the variable contains a type, e.g. number or player\\n{variable} is an object # will always succeed if the variable is set as everything is an object, even types.\\ndisable PvP in the event-world\\nkill the loop-entity"
+},
+{
+  "id" : "uuid",
+  "name" : "UUID",
+  "patterns" : [
+    "Missing patterns.",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Represents the UUID (universally unique identifier) of an object.",
+  "examples" : "set {_uuid} to uuid of player"
 },
 {
   "id" : "vector",
@@ -758,7 +735,7 @@
   "id" : "environment",
   "name" : "World Environment",
   "patterns" : [
-    "custom, end, nether, normal",
+    "custom, end, nether, normal, overworld, the end, the nether, the overworld",
 
     "pattern_end"
   ],
@@ -810,20 +787,6 @@ A bell will start resonating five game ticks after being rung, and will continue
   "since" : "2.9.0",
   "description" : "Checks to see if a bell is currently ringing. A bell typically rings for 50 game ticks.",
   "examples" : "target block is ringing"
-},
-{
-  "id" : "CondCanBuild",
-  "name" : "Can Build",
-  "patterns" : [
-    "%<a href='./classes.html#player'>players</a>% (can|(is|are) allowed to) build %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
-"%<a href='./classes.html#player'>players</a>% (can('t|not)|(is|are)(n't| not) allowed to) build %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.0",
-  "description" : "Tests whether a player is allowed to build at a certain location.
-This condition requires a supported <a href='./classes.html#region'>regions</a> plugin to be installed.",
-  "examples" : "command /setblock &amp;lt;material&amp;gt;:\\n    description: set the block at your crosshair to a different type\\n    trigger:\\n        player cannot build at the targeted block:\\n            message \"You do not have permission to change blocks there!\"\\n            stop\\n        set the targeted block to argument"
 },
 {
   "id" : "CondCanFly",
@@ -1358,14 +1321,16 @@ The 'additional tooltip' hides certain information from certain items (potions, 
   "id" : "CondIsEdible",
   "name" : "Is Edible",
   "patterns" : [
-    "%<a href='./classes.html#material'>materials</a>% (is|are) edible",
-"%<a href='./classes.html#material'>materials</a>% (isn't|is not|aren't|are not) edible",
+    "%<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% (is|are) (edible|consumable)",
+"%<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>% (isn't|is not|aren't|are not) (edible|consumable)",
 
     "pattern_end"
   ],
   "since" : "2.2-dev36",
-  "description" : "Checks whether a material is edible.",
-  "examples" : "steak is edible\\nplayer's tool is edible"
+  "description" : "Checks whether a Material/ItemStack is edible/consumable.
+If running MC 1.20.6-1.21.1: Will check if an ItemStack has a food component.
+If running MC 1.21.3+: Will check if an ItemStack has a consumable component.",
+  "examples" : "cooked beef is edible\\nplayer's tool is edible"
 },
 {
   "id" : "CondIsEmpty",
@@ -1616,20 +1581,6 @@ Cannot be used with endermen, use 'entity is [not] an enderman holding &lt;item 
   "since" : "2.3, 2.5 (revamp with chunk at location/coords)",
   "description" : "Checks whether or not a chunk/world is loaded. 'chunk at 1, 1' uses chunk coords, which are location coords divided by 16.",
   "examples" : "if chunk at {home::%player's uuid%} is loaded:\\nif chunk 1, 10 in world \"world\" is loaded:\\nif world(\"lobby\") is loaded:"
-},
-{
-  "id" : "CondIsMember",
-  "name" : "Is Member/Owner of Region",
-  "patterns" : [
-    "%<a href='./classes.html#offlineplayer'>offline players</a>% (is|are) ([a] member|[(the|an)] owner) of [[the] region] %<a href='./classes.html#region'>regions</a>%",
-"%<a href='./classes.html#offlineplayer'>offline players</a>% (is|are)(n't| not) ([a] member|[(the|an)] owner) of [[the] region] %<a href='./classes.html#region'>regions</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "Checks whether a player is a member or owner of a particular region.
-This condition requires a supported regions plugin to be installed.",
-  "examples" : "on region enter:\\n    player is the owner of the region\\n    message \"Welcome back to %region%!\"\\n    send \"%player% just entered %region%!\" to all members of the region"
 },
 {
   "id" : "CondIsVectorNormalized",
@@ -2097,22 +2048,6 @@ Paper 1.17.1+ is required for non-player entities.",
   "examples" : "PvP is enabled\\nPvP is disabled in \"world\""
 },
 {
-  "id" : "CondRegionContains",
-  "name" : "Region Contains",
-  "patterns" : [
-    "[[the] region] %<a href='./classes.html#region'>regions</a>% contain[s] %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
-"%<a href='./classes.html#location'>locations</a>% (is|are) ([contained] in|part of) [[the] region] %<a href='./classes.html#region'>regions</a>%",
-"[[the] region] %<a href='./classes.html#region'>regions</a>% (do|does)(n't| not) contain %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
-"%<a href='./classes.html#location'>locations</a>% (is|are)(n't| not) (contained in|part of) [[the] region] %<a href='./classes.html#region'>regions</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "Checks whether a location is contained in a particular <a href='./classes.html#region'>region</a>.
-This condition requires a supported regions plugin to be installed.",
-  "examples" : "player is in the region {regions::3}\\n\\non region enter:\\n    region contains {flags.%world%.red}\\n    message \"The red flag is near!\""
-},
-{
   "id" : "CondResourcePack",
   "name" : "Resource Pack",
   "patterns" : [
@@ -2398,15 +2333,17 @@ If the command is a bungeecord side command, you can use the [bungeecord] option
   "id" : "EffHealth",
   "name" : "Damage/Heal/Repair",
   "patterns" : [
-    "damage %<a href='./classes.html#livingentity'>living entities</a>/<a href='./classes.html#itemstack'>item stacks</a>% by %<a href='./classes.html#number'>number</a>% [heart[s]] [with fake cause %<a href='./classes.html#damagecause'>damage cause</a>%]",
+    "damage %<a href='./classes.html#livingentity'>living entities</a>/<a href='./classes.html#itemstack'>item stacks</a>% by %<a href='./classes.html#number'>number</a>% [heart[s]]",
 "heal %<a href='./classes.html#livingentity'>living entities</a>% [by %<a href='./classes.html#number'>number</a>% [heart[s]]]",
 "repair %<a href='./classes.html#itemstack'>item stacks</a>% [by %<a href='./classes.html#number'>number</a>%]",
 
     "pattern_end"
   ],
   "since" : "1.0",
-  "description" : "Damage/Heal/Repair an entity, or item.",
-  "examples" : "damage player by 5 hearts\\nheal the player\\nrepair tool of player"
+  "description" : "Damage/Heal/Repair an entity, or item.
+Damage/healing will be referenced by full health amount.
+If using optional 'hearts', the amount will be cut in half to represent a heart.",
+  "examples" : "damage player by 5 hearts\\ndamage all mobs by 10\\nheal the player\\nrepair tool of player"
 },
 {
   "id" : "Delay",
@@ -2481,6 +2418,20 @@ If the command is a bungeecord side command, you can use the [bungeecord] option
   "description" : "Enforces or un-enforce a server's whitelist.
 All non-whitelisted players will be kicked upon enforcing the whitelist.",
   "examples" : "enforce the whitelist\\nunenforce the whitelist"
+},
+{
+  "id" : "EffEquip",
+  "name" : "Equip",
+  "patterns" : [
+    "equip %<a href='./classes.html#livingentity'>living entities</a>% with %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>%",
+"make %<a href='./classes.html#livingentity'>living entities</a>% wear %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "1.0, 2.7 (multiple entities)",
+  "description" : "Equips an entity with some given armor.
+This will replace any armor that the entity is wearing.",
+  "examples" : "equip player with diamond helmet\\nequip player with diamond helmet, leather chestplate, golden leggings and iron boots\\nequip all horses with a saddle and diamond horse armor"
 },
 {
   "id" : "EffExit",
@@ -4748,19 +4699,6 @@ Do note that other event values, such as 'player', won't work in this section.",
   "examples" : "on redstone change:\\n    send \"someone is using redstone\" to console"
 },
 {
-  "id" : "region_enterleave",
-  "name" : "On Region Enter/Leave",
-  "patterns" : [
-    "[on] (enter[ing]|leav(e|ing)|exit[ing]) [of] ([a] region|[[the] region] %<a href='./classes.html#region'>regions</a>%)",
-"[on] region (enter[ing]|leav(e|ing)|exit[ing])",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "Called when a player enters or leaves a <a href='./classes.html#region'>region</a>.\\nThis event requires a supported regions plugin to be installed.",
-  "examples" : "on region exit:\\n    message \"Leaving %region%.\""
-},
-{
   "id" : "resource_pack_request_response",
   "name" : "On Resource Pack Request Response",
   "patterns" : [
@@ -5341,18 +5279,6 @@ For entities, 'Age' represents the time left for them to become adults and it's 
   "examples" : "command /banlist:\\n    trigger:\\n        send all the banned players"
 },
 {
-  "id" : "ExprAllGroups",
-  "name" : "All Groups",
-  "patterns" : [
-    "all groups",
-
-    "pattern_end"
-  ],
-  "since" : "2.2-dev35",
-  "description" : "All the groups a player can have. This expression requires Vault and a compatible permissions plugin to be installed.",
-  "examples" : "command /group &amp;lt;text&amp;gt;:\\n    trigger:\\n        if argument is \"list\":\\n            send \"%all groups%\""
-},
-{
   "id" : "ExprOps",
   "name" : "All Operators",
   "patterns" : [
@@ -5689,10 +5615,10 @@ Can optionally include a direction as well, e.g. 'block above' or 'block in fron
 
     "pattern_end"
   ],
-  "since" : "2.5, 2.5.2 (set), 3.0.0 (BlockDisplays)",
-  "description" : "Get the <a href='classes.html#blockdata'>block data</a> associated with a Block or BlockDisplay entity.
+  "since" : "2.5, 2.5.2 (set), 3.0.0 (BlockDisplay/FallingBlock)",
+  "description" : "Get the <a href='classes.html#blockdata'>block data</a> associated with a Block or BlockDisplay/FallingBlock entity.
 This data can also be used to set blocks.",
-  "examples" : "set {data} to block data of target block\\nset block at player to {data}\\nset block data of target block to oak_stairs[facing=south;waterlogged=true]"
+  "examples" : "set {data} to block data of target block\\nset block at player to {data}\\nset block data of target block to oak_stairs[facing=south;waterlogged=true]\\nspawn falling block above player:\\n    set blockdata of entity to oak_stairs[]"
 },
 {
   "id" : "ExprBlockHardness",
@@ -5738,19 +5664,6 @@ This number is used to calculate the time required to break each block.",
   "description" : "Blocks relative to other blocks or between other blocks. Can be used to get blocks relative to other blocks or for looping.
 Blocks from/to and between will return a straight line whereas blocks within will return a cuboid.",
   "examples" : "loop blocks above the player:\\nloop blocks between the block below the player and the targeted block:\\nset the blocks below the player, the victim and the targeted block to air\\nset all blocks within {loc1} and {loc2} to stone\\nset all blocks within chunk at player to air"
-},
-{
-  "id" : "ExprBlocksInRegion",
-  "name" : "Blocks in Region",
-  "patterns" : [
-    "[(all|the)] blocks (in|of) [[the] region[s]] %<a href='./classes.html#region'>regions</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "All blocks in a <a href='./classes.html#region'>region</a>.
-This expression requires a supported regions plugin to be installed.",
-  "examples" : "loop all blocks in the region {arena.%{faction.%player%}%}:\\n    clear the loop-block"
 },
 {
   "id" : "ExprBookAuthor",
@@ -5908,7 +5821,8 @@ If strings of more than one character are given, only the first character of eac
     "pattern_end"
   ],
   "since" : "2.0, 2.8.0 (loaded chunks)",
-  "description" : "Returns the <a href='./classes.html#chunk'>chunk</a> of a block, location or entity is in, or a list of the loaded chunks of a world.",
+  "description" : "Returns the <a href='./classes.html#chunk'>chunk</a> of a block, location or entity is in, or a list of the loaded chunks of a world.
+Resetting a chunk may or may not be supported on some MC versions.",
   "examples" : "add the chunk at the player to {protected chunks::*}\\nset {_chunks::*} to the loaded chunks of the player's world"
 },
 {
@@ -6318,16 +6232,17 @@ This is number that was displayed in the enchantment table, not the actual numbe
   "id" : "ExprEnchantmentLevel",
   "name" : "Enchantment Level",
   "patterns" : [
-    "[the] [enchant[ment]] level[s] of %<a href='./classes.html#enchantment'>enchantments</a>% (on|of) %<a href='./classes.html#itemstack'>item stacks</a>%",
-"[the] %<a href='./classes.html#enchantment'>enchantments</a>% [enchant[ment]] level[s] (on|of) %<a href='./classes.html#itemstack'>item stacks</a>%",
-"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] %<a href='./classes.html#enchantment'>enchantments</a>% [enchant[ment]] level[s]",
-"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] [enchant[ment]] level[s] of %<a href='./classes.html#enchantment'>enchantments</a>%",
+    "[the] [stored] [enchant[ment]] level[s] of %<a href='./classes.html#enchantment'>enchantments</a>% (on|of) %<a href='./classes.html#itemstack'>item stacks</a>%",
+"[the] %<a href='./classes.html#enchantment'>enchantments</a>% [stored] [enchant[ment]] level[s] (on|of) %<a href='./classes.html#itemstack'>item stacks</a>%",
+"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] %<a href='./classes.html#enchantment'>enchantments</a>% [stored] [enchant[ment]] level[s]",
+"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] [stored] [enchant[ment]] level[s] of %<a href='./classes.html#enchantment'>enchantments</a>%",
 
     "pattern_end"
   ],
   "since" : "2.0",
-  "description" : "The level of a particular <a href='classes.html#enchantment'>enchantment</a> on an item.",
-  "examples" : "player's tool is a sword of sharpness:\\n    message \"You have a sword of sharpness %level of sharpness of the player's tool% equipped\""
+  "description" : "The level of a particular <a href='classes.html#enchantment'>enchantment</a> on an item.
+The optional 'stored' pattern is for Enchanted Books, where they're not actually enchanted but have stored enchantments.",
+  "examples" : "if player's tool is enchanted with sharpness:\\n    message \"You have a sword of sharpness %level of sharpness of the player's tool% equipped\"\\n# Stored Enchantments\\nset {_item} to 1 of enchanted book\\nset stored enchantment level of sharpness of {_item} to 10"
 },
 {
   "id" : "ExprEnchantmentOffer",
@@ -6458,12 +6373,13 @@ Resetting an entity's attribute is only available in Minecraft 1.11 and above.",
   "name" : "Equipment Slot",
   "patterns" : [
     "%<a href='./classes.html#equipmentslot'>equipment slot</a>% slot[s] of %<a href='./classes.html#livingentity'>living entities</a>%",
+"%<a href='./classes.html#livingentity'>living entities</a>%'[s] %<a href='./classes.html#equipmentslot'>equipment slot</a>% slot[s]",
 
     "pattern_end"
   ],
   "since" : "1.0, 2.8.0 (Armour)",
   "description" : "Equipment of living entities, i.e. the head, chest, legs, feet slots.",
-  "examples" : "set chest slot of player to itemstack of diamond chestplate\\ndelete chest slot of player\\nset {_i::*} to feet slot of all players"
+  "examples" : "set chest slot of player to itemstack of diamond chestplate\\ndelete chest slot of player\\nset {_i::*} to feet slot of all players\\nset body slot of all llamas to red carpet"
 },
 {
   "id" : "ExprExhaustion",
@@ -6739,13 +6655,13 @@ Thus you may wish to use the event block in this case (e.g. <code>the fuel slot 
   "id" : "ExprGameRule",
   "name" : "Gamerule Value",
   "patterns" : [
-    "[the] gamerule %<a href='./classes.html#gamerule'>gamerule</a>% of %<a href='./classes.html#world'>worlds</a>%",
+    "[the] gamerule %*<a href='./classes.html#gamerule'>gamerule</a>% of %<a href='./classes.html#world'>worlds</a>%",
 
     "pattern_end"
   ],
   "since" : "2.5",
   "description" : "The gamerule value of a world.",
-  "examples" : "set the gamerule commandBlockOutput of world \"world\" to false"
+  "examples" : "set the gamerule commandBlockOutput of world \"world\" to false\\nset gamerule doDaylightCycle of all worlds to false"
 },
 {
   "id" : "ExprGlidingState",
@@ -6785,20 +6701,6 @@ Thus you may wish to use the event block in this case (e.g. <code>the fuel slot 
   "since" : "2.2-dev21",
   "description" : "If entity is affected by gravity or not, i.e. if it has Minecraft 1.10+ NoGravity flag.",
   "examples" : "set gravity of player off"
-},
-{
-  "id" : "ExprGroup",
-  "name" : "Group",
-  "patterns" : [
-    "[the] group[s] of %<a href='./classes.html#offlineplayer'>offline players</a>%",
-"%<a href='./classes.html#offlineplayer'>offline players</a>%'[s] group[s]",
-
-    "pattern_end"
-  ],
-  "since" : "2.2-dev35",
-  "description" : "The primary group or all groups of a player. This expression requires Vault and a compatible permissions plugin to be installed.
-If you have LuckPerms, ensure you have vault integration enabled in the luck perms configurations.",
-  "examples" : "on join:\\n    broadcast \"%group of player%\" # this is the player's primary group\\n    broadcast \"%groups of player%\" # this is all of the player's groups"
 },
 {
   "id" : "ExprHanging",
@@ -7068,8 +6970,9 @@ The 'input index' pattern can be used when acting on a variable to access the in
     "pattern_end"
   ],
   "since" : "1.0",
-  "description" : "The inventory of a block or player. You can usually omit this expression and can directly add or remove items to/from blocks or players.",
-  "examples" : "add a plank to the player's inventory\\nclear the player's inventory\\nremove 5 wool from the inventory of the clicked block"
+  "description" : "The inventory of a block or entity.
+You can usually omit this expression and can directly add or remove items to/from blocks or entities.",
+  "examples" : "add an oak plank to the player's inventory\\nclear the player's inventory\\nremove 5 of wool from the inventory of the clicked block"
 },
 {
   "id" : "ExprInventoryAction",
@@ -7145,8 +7048,11 @@ NOTE: 'Viewers' expression returns a list of players viewing the inventory. Note
     "pattern_end"
   ],
   "since" : "2.2-dev24",
-  "description" : "The amount of an <a href='classes.html#itemstack'>item stack</a>.",
-  "examples" : "send \"You have got %item amount of player's tool% %player's tool% in your hand!\" to player"
+  "description" : "The stack size of an <a href='classes.html#itemstack'>ItemStack</a>.
+This amount is clamped between 0 and 99.
+Anything above 99 will not serialize and may kick the player.
+0 and below will delete the item.",
+  "examples" : "send \"You have got %item amount of player's tool% %player's tool% in your hand!\" to player\\nset item amount of player's tool to 10\\nadd 3 to item amount of player's tool\\nremove 2 from item amount of player's tool"
 },
 {
   "id" : "ExprItemCooldown",
@@ -7165,13 +7071,14 @@ NOTE: 'Viewers' expression returns a list of players viewing the inventory. Note
   "id" : "ExprEnchantments",
   "name" : "Item Enchantments",
   "patterns" : [
-    "[the] enchantments of %<a href='./classes.html#itemstack'>item stacks</a>%",
-"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] enchantments",
+    "[the] [stored] enchantments of %<a href='./classes.html#itemstack'>item stacks</a>%",
+"%<a href='./classes.html#itemstack'>item stacks</a>%'[s] [stored] enchantments",
 
     "pattern_end"
   ],
   "since" : "2.2-dev36",
-  "description" : "All the enchantments an <a href='classes.html#itemstack'>itemstack</a> has.",
+  "description" : "All the enchantments an <a href='classes.html#itemstack'>itemstack</a> has.
+The optional 'stored' pattern is for Enchanted Books, which do not have enchantments but rather have stored enchantments.",
   "examples" : "clear enchantments of event-item\\nloop enchantments of player's tool:\\nif enchantments of {_item} contains sharpness:"
 },
 {
@@ -7231,7 +7138,7 @@ If multiple strings are passed, each of them will be a separate line in the lore
   "examples" : "set {_test} to stone with lore \"line 1\" and \"line 2\"\\ngive {_test} to player"
 },
 {
-  "id" : "ExprSecItemStackCreate",
+  "id" : "ExprItemStackCreate",
   "name" : "ItemStack Create",
   "patterns" : [
     "[new] item[ ]stack[s] (of|from) [%<a href='./classes.html#number'>number</a>% [of]] %<a href='./classes.html#material'>materials</a>%",
@@ -7239,9 +7146,8 @@ If multiple strings are passed, each of them will be a separate line in the lore
     "pattern_end"
   ],
   "since" : "3.0.0",
-  "description" : "Create a new item stack.
-This can be used as an expression as well as a section.",
-  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel\\n\\n# Section\\nset {_i} to itemstack of diamond sword\\n    set name of item to \"My Sword\"\\n    set custom model data of item to 1010\\ngive {_i} to player"
+  "description" : "Create a new item stack.",
+  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel"
 },
 {
   "id" : "ExprItemsIn",
@@ -7692,14 +7598,16 @@ Some items, like bows and shields, do not have a limit to their use. They will r
   "id" : "ExprMaxStack",
   "name" : "Maximum Stack Size",
   "patterns" : [
-    "[the] max[imum] stack[[ ]size] of %<a href='./classes.html#material'>material</a>/<a href='./classes.html#itemstack'>item stack</a>%",
-"%<a href='./classes.html#material'>material</a>/<a href='./classes.html#itemstack'>item stack</a>%'[s] max[imum] stack[[ ]size]",
+    "[the] max[imum] stack[[ ]size] of %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>%",
+"%<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>%'[s] max[imum] stack[[ ]size]",
 
     "pattern_end"
   ],
-  "since" : "2.1",
-  "description" : "The maximum stack size of the specified material, e.g. 64 for torches, 16 for buckets, and 1 for swords.",
-  "examples" : "send \"You can only pick up %max stack size of player's tool% of %type of (player's tool)%\" to player"
+  "since" : "2.1, INSERT VERSION (change)",
+  "description" : "The maximum stack size of the specified ItemStack/Material, e.g. 64 for torches, 16 for buckets, and 1 for swords.
+The max stack size you can set must be between 1 and 99 (Clamped value from Minecraft).
+Resetting will reset back to the vanilla Minecraft value.",
+  "examples" : "send \"You can only pick up %max stack size of player's tool% of %type of (player's tool)%\" to player\\nset max stack size of player's tool to 10\\nadd 3 to max stack size of player's tool\\nremove 20 from max stack size of player's tool\\nreset max stack size of player's tool"
 },
 {
   "id" : "ExprMe",
@@ -7780,19 +7688,6 @@ Some items, like bows and shields, do not have a limit to their use. They will r
   "since" : "2.5.1",
   "description" : "The velocity of a minecart as soon as it has been derailed or as soon as it starts flying.",
   "examples" : "on right click on minecart:\\n    set derailed velocity of event-entity to vector 2, 10, 2"
-},
-{
-  "id" : "ExprBalance",
-  "name" : "Money",
-  "patterns" : [
-    "[the] (money|balance|[bank] account) of %<a href='./classes.html#offlineplayer'>offline players</a>%",
-"%<a href='./classes.html#offlineplayer'>offline players</a>%'[s] (money|balance|[bank] account)",
-
-    "pattern_end"
-  ],
-  "since" : "2.0, 2.5 (offline players)",
-  "description" : "How much virtual money a player has (can be changed).",
-  "examples" : "message \"You have %player's money%\" # the currency name will be added automatically\\nremove 20$ from the player's balance # replace '$' by whatever currency you use\\nadd 200 to the player's account # or omit the currency altogether"
 },
 {
   "id" : "ExprMoonPhase",
@@ -8268,19 +8163,6 @@ When adding a potion effect type (rather than a potion effect), it will default 
   "examples" : "set {_p::*} to active potion effects of player\\nclear all the potion effects of player\\nclear all the potion effects of player's tool\\nadd potion effects of player to potion effects of player's tool\\nadd speed to potion effects of target entity\\nremove speed and night vision from potion effects of player"
 },
 {
-  "id" : "ExprPrefixSuffix",
-  "name" : "Prefix/Suffix",
-  "patterns" : [
-    "[the] [chat] (prefix|suffix) of %<a href='./classes.html#player'>players</a>%",
-"%<a href='./classes.html#player'>players</a>%'[s] [chat] (prefix|suffix)",
-
-    "pattern_end"
-  ],
-  "since" : "2.0",
-  "description" : "The prefix or suffix as defined in the server's chat plugin.",
-  "examples" : "on chat:\\n    cancel event\\n    broadcast \"%player's prefix%%player's display name%%player's suffix%: %message%\" to the player's world\\n\\nset the player's prefix to \"[&amp;lt;red&amp;gt;Admin&lt;reset&gt;] \""
-},
-{
   "id" : "ExprProjectileCriticalState",
   "name" : "Projectile Critical State",
   "patterns" : [
@@ -8426,46 +8308,6 @@ Note that this is not guaranteed to give same results on all servers.",
   "since" : "2.5",
   "description" : "Power of a redstone block",
   "examples" : "if redstone power of targeted block is 15:\\n    send \"This block is very powerful!\""
-},
-{
-  "id" : "ExprRegion",
-  "name" : "Region",
-  "patterns" : [
-    "[the] [event-]region",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "The <a href='./classes.html#region'>region</a> involved in an event.
-This expression requires a supported regions plugin to be installed.",
-  "examples" : "on region enter:\\n    region is {forbidden region}\\n    cancel the event"
-},
-{
-  "id" : "ExprMembersOfRegion",
-  "name" : "Region Members & Owners",
-  "patterns" : [
-    "[(all|the)] (members|owner[s]) of [[the] region[s]] %<a href='./classes.html#region'>regions</a>%",
-"[[the] region[s]] %<a href='./classes.html#region'>regions</a>%'[s] (members|owner[s])",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "A list of members or owners of a <a href='./classes.html#region'>region</a>.
-This expression requires a supported regions plugin to be installed.",
-  "examples" : "on entering of a region:\\n    message \"You're entering %region% whose owners are %owners of region%\""
-},
-{
-  "id" : "ExprRegionsAt",
-  "name" : "Regions At",
-  "patterns" : [
-    "[the] region[(s)] %<a href='./classes.html#direction'>direction</a>% %<a href='./classes.html#location'>locations</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.1",
-  "description" : "All <a href='./classes.html#region'>regions</a> at a particular <a href='./classes/#location'>location</a>.
-This expression requires a supported regions plugin to be installed.",
-  "examples" : "On click on a sign:\\n    line 1 of the clicked block is \"[region info]\"\\n    set {_regions::*} to regions at the clicked block\\n    if {_regions::*} is empty:\\n        message \"No regions exist at this sign.\"\\n    else:\\n        message \"Regions containing this sign: &amp;lt;gold&amp;gt;%{_regions::*}%&lt;r&gt;.\""
 },
 {
   "id" : "ExprRemainingAir",
@@ -8876,8 +8718,8 @@ Please note that changing a player's speed will change their FOV just like potio
   "examples" : "on tame:\\n    if the tamer is a player:\\n        send \"someone tamed something!\" to console"
 },
 {
-  "id" : "ExprTarget",
-  "name" : "Target",
+  "id" : "ExprTargetEntity",
+  "name" : "Target Entity",
   "patterns" : [
     "[the] target[ed] (%*<a href='./classes.html#entitytype'>entity type</a>%|entity) [of %<a href='./classes.html#livingentity'>living entities</a>%] [ignoring blocks] [[with|at] ray[ ]size %<a href='./classes.html#number'>number</a>%]",
 "%<a href='./classes.html#livingentity'>living entities</a>%'[s] target[ed] (%*<a href='./classes.html#entitytype'>entity type</a>%|entity) [ignoring blocks] [[with|at] ray[ ]size %<a href='./classes.html#number'>number</a>%]",
@@ -9075,9 +8917,7 @@ Types of potion effects are potion effect types.",
     "pattern_end"
   ],
   "since" : "2.1.2, 2.2 (offline players' UUIDs), 2.2-dev24 (other entities' UUIDs)",
-  "description" : "The UUID of a player, entity or world.
-In the future there will be an option to use a player's UUID instead of the name in variable names (i.e. when %player% is used), but for now this can be used.
-<em>Please note that this expression does not work for offline players if you are under 1.8!</em>",
+  "description" : "The UUID of a player, entity or world.",
   "examples" : "# prevents people from joining the server if they use the name of a player\\n# who has played on this server at least once since this script has been added\\non login:\\n    if {uuid::%name of player%} exists:\\n        {uuid::%name of player%} is not uuid of player\\n        kick player due to \"Someone with your name has played on this server before\"\\n    else:\\n        set {uuid::%name of player%} to uuid of player"
 },
 {
@@ -9410,7 +9250,7 @@ This can only be set in a <a href='events.html#server_list_ping'>server list pin
   "examples" : "on server list ping:\\n    set the protocol version to 0 # 13w41a (1.7), so it will show the version string always\\n    set the version string to \"&amp;lt;light green&amp;gt;Version: &amp;lt;orange&amp;gt;%minecraft version%\""
 },
 {
-  "id" : "ExprAttacked",
+  "id" : "ExprVictim",
   "name" : "Victim",
   "patterns" : [
     "[the] victim",
@@ -9584,14 +9424,14 @@ The whitelist can be enabled or disabled by setting the whitelist to true or fal
   "id" : "ExprXOf",
   "name" : "X of Item",
   "patterns" : [
-    "%<a href='./classes.html#number'>number</a>% of %<a href='./classes.html#itemstack'>item stacks</a>%",
+    "%<a href='./classes.html#number'>number</a>% of %<a href='./classes.html#material'>materials</a>/<a href='./classes.html#itemstack'>item stacks</a>%",
 
     "pattern_end"
   ],
   "since" : "1.2",
   "description" : "An expression to be able to use a certain amount of items where the amount can be any expression.
 Please note that this expression is not stable and might be replaced in the future.",
-  "examples" : "give level of player of pickaxes to the player"
+  "examples" : "give level of player of diamond sword to the player"
 },
 {
   "id" : "ExprYawPitch",
