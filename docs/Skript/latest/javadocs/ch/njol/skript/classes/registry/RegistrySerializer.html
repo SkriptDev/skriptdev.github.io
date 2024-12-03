@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">ch.njol.skript.classes.registry</a></div>
-<h1 title="Class RegistrySerializer" class="title">Class RegistrySerializer&lt;R extends org.bukkit.Keyed&gt;</h1>
+<h1 title="Class RegistrySerializer" class="title">Class RegistrySerializer&lt;R extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="../../../yggdrasil/YggdrasilSerializer.html" title="class in ch.njol.yggdrasil">ch.njol.yggdrasil.YggdrasilSerializer</a>&lt;R&gt;
@@ -102,7 +102,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../yggdrasil/ClassResolver.html" title="interface in ch.njol.yggdrasil">ClassResolver</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">RegistrySerializer&lt;R extends org.bukkit.Keyed&gt;</span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">RegistrySerializer&lt;R extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</span>
 <span class="extends-implements">extends <a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;R&gt;</span></div>
 <div class="block">Serializer for <a href="RegistryClassInfo.html" title="class in ch.njol.skript.classes.registry"><code>RegistryClassInfo</code></a></div>
 </section>
@@ -125,7 +125,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.bukkit.Registry)" class="member-name-link">RegistrySerializer</a><wbr>(org.bukkit.Registry&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a>&gt;&nbsp;registry)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.bukkit.Registry)" class="member-name-link">RegistrySerializer</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a>&gt;&nbsp;registry)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -184,7 +184,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(org.bukkit.Registry)">
 <h3>RegistrySerializer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RegistrySerializer</span><wbr><span class="parameters">(org.bukkit.Registry&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a>&gt;&nbsp;registry)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RegistrySerializer</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a>&gt;&nbsp;registry)</span></div>
 </section>
 </li>
 </ul>
@@ -208,7 +208,7 @@ loadScripts(document, 'script');</script>
  <b>This method must be thread-safe</b>. Use <a href="../../util/Task.html#callSync(java.util.concurrent.Callable)"><code>Task.callSync(Callable)</code></a> if you need to serialise on Bukkit's main thread.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../Serializer.html#serialize(T)">serialize</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends org.bukkit.Keyed&gt;</code></dd>
+<dd><code><a href="../Serializer.html#serialize(T)">serialize</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>o</code> - The object to serialise</dd>
 <dt>Returns:</dt>
@@ -222,11 +222,11 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a></span>&nbsp;<span class="element-name">deserialize</span><wbr><span class="parameters">(<a href="../../../yggdrasil/Fields.html" title="class in ch.njol.yggdrasil">Fields</a>&nbsp;fields)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/StreamCorruptedException.html" title="class or interface in java.io" class="external-link">StreamCorruptedException</a></span></div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../Serializer.html#deserialize(ch.njol.yggdrasil.Fields)">Serializer</a></code></span></div>
-<div class="block">Used to deserialise Bukkit objects and other stuff that cannot be instantiated, e.g. a plugin may and should not create a new instance of <code>World</code>, but use
- <code>Bukkit.getWorld(String)</code> to get an existing world object.</div>
+<div class="block">Used to deserialise Bukkit objects and other stuff that cannot be instantiated, e.g. a plugin may and should not create a new instance of <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/World.html" title="class or interface in org.bukkit" class="external-link"><code>World</code></a>, but use
+ <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Bukkit.html#getWorld(java.lang.String)" title="class or interface in org.bukkit" class="external-link"><code>Bukkit.getWorld(String)</code></a> to get an existing world object.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="../Serializer.html#deserialize(ch.njol.yggdrasil.Fields)">deserialize</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends org.bukkit.Keyed&gt;</code></dd>
+<dd><code><a href="../Serializer.html#deserialize(ch.njol.yggdrasil.Fields)">deserialize</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>fields</code> - The Fields object that holds the information about the serialised object</dd>
 <dt>Returns:</dt>
@@ -244,7 +244,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Not currently used (everything happens on Bukkit's main thread).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../Serializer.html#mustSyncDeserialization()">mustSyncDeserialization</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends org.bukkit.Keyed&gt;</code></dd>
+<dd><code><a href="../Serializer.html#mustSyncDeserialization()">mustSyncDeserialization</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>Whether deserialisation must be done on Bukkit's main thread.</dd>
 </dl>
@@ -261,7 +261,7 @@ loadScripts(document, 'script');</script>
  You must override and use <a href="../Serializer.html#deserialize(ch.njol.yggdrasil.Fields)"><code>Serializer.deserialize(Fields)</code></a> if this method returns false (<a href="../Serializer.html#deserialize(T,ch.njol.yggdrasil.Fields)"><code>Serializer.deserialize(Object, Fields)</code></a> will no be used anymore in this case).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../Serializer.html#canBeInstantiated()">canBeInstantiated</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends org.bukkit.Keyed&gt;</code></dd>
+<dd><code><a href="../Serializer.html#canBeInstantiated()">canBeInstantiated</a></code>&nbsp;in class&nbsp;<code><a href="../Serializer.html" title="class in ch.njol.skript.classes">Serializer</a>&lt;<a href="RegistrySerializer.html" title="type parameter in RegistrySerializer">R</a> extends <a href="https://jd.papermc.io/paper/1.21.3/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
