@@ -4,6 +4,7 @@ ch.njol.skript.bukkitutil.sounds
 ch.njol.skript.classes
 ch.njol.skript.classes.data
 ch.njol.skript.classes.data.bukkit
+ch.njol.skript.classes.data.defaults
 ch.njol.skript.classes.registry
 ch.njol.skript.command
 ch.njol.skript.config

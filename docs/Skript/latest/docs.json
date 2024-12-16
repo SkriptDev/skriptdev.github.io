@@ -1,5 +1,5 @@
 {
-  "skriptVersion" : "3.0.0-Beta3",
+  "skriptVersion" : "3.0.0-Beta4",
 
   "classes" : [
     {
@@ -18,7 +18,7 @@
   "id" : "biome",
   "name" : "Biome",
   "patterns" : [
-    "badlands, bamboo jungle, basalt deltas, beach, birch forest, cherry grove, cold ocean, crimson forest, dark forest, deep cold ocean, deep dark, deep frozen ocean, deep lukewarm ocean, deep ocean, desert, dripstone caves, end barrens, end highlands, end midlands, eroded badlands, flower forest, forest, frozen ocean, frozen peaks, frozen river, grove, ice spikes, jagged peaks, jungle, lukewarm ocean, lush caves, mangrove swamp, meadow, mushroom fields, nether wastes, ocean, old growth birch forest, old growth pine taiga, old growth spruce taiga, plains, river, savanna, savanna plateau, small end islands, snowy beach, snowy plains, snowy slopes, snowy taiga, soul sand valley, sparse jungle, stony peaks, stony shore, sunflower plains, swamp, taiga, the end, the void, warm ocean, warped forest, windswept forest, windswept gravelly hills, windswept hills, windswept savanna, wooded badlands",
+    "badlands, bamboo jungle, basalt deltas, beach, birch forest, cherry grove, cold ocean, crimson forest, dark forest, deep cold ocean, deep dark, deep frozen ocean, deep lukewarm ocean, deep ocean, desert, dripstone caves, end barrens, end highlands, end midlands, eroded badlands, flower forest, forest, frozen ocean, frozen peaks, frozen river, grove, ice spikes, jagged peaks, jungle, lukewarm ocean, lush caves, mangrove swamp, meadow, mushroom fields, nether wastes, ocean, old growth birch forest, old growth pine taiga, old growth spruce taiga, pale garden, plains, river, savanna, savanna plateau, small end islands, snowy beach, snowy plains, snowy slopes, snowy taiga, soul sand valley, sparse jungle, stony peaks, stony shore, sunflower plains, swamp, taiga, the end, the void, warm ocean, warped forest, windswept forest, windswept gravelly hills, windswept hills, windswept savanna, wooded badlands",
 
     "pattern_end"
   ],
@@ -224,7 +224,7 @@
   "id" : "entitytype",
   "name" : "Entity Type",
   "patterns" : [
-    "acacia boat, acacia chest boat, allay, area effect cloud, armadillo, armor stand, arrow, axolotl, bamboo chest raft, bamboo raft, bat, bee, birch boat, birch chest boat, blaze, block display, bogged, breeze, breeze wind charge, camel, cat, cave spider, cherry boat, cherry chest boat, chest minecart, chicken, cod, command block minecart, cow, creaking, creaking transient, creeper, dark oak boat, dark oak chest boat, dolphin, donkey, dragon fireball, drowned, egg, elder guardian, end crystal, ender dragon, ender pearl, enderman, endermite, evoker, evoker fangs, experience bottle, experience orb, eye of ender, falling block, fireball, firework rocket, fishing bobber, fox, frog, furnace minecart, ghast, giant, glow item frame, glow squid, goat, guardian, hoglin, hopper minecart, horse, husk, illusioner, interaction, iron golem, item, item display, item frame, jungle boat, jungle chest boat, leash knot, lightning bolt, llama, llama spit, magma cube, mangrove boat, mangrove chest boat, marker, minecart, mooshroom, mule, oak boat, oak chest boat, ocelot, ominous item spawner, painting, pale oak boat, pale oak chest boat, panda, parrot, phantom, pig, piglin, piglin brute, pillager, player, polar bear, potion, pufferfish, rabbit, ravager, salmon, sheep, shulker, shulker bullet, silverfish, skeleton, skeleton horse, slime, small fireball, sniffer, snow golem, snowball, spawner minecart, spectral arrow, spider, spruce boat, spruce chest boat, squid, stray, strider, tadpole, text display, tnt, tnt minecart, trader llama, trident, tropical fish, turtle, vex, villager, vindicator, wandering trader, warden, wind charge, witch, wither, wither skeleton, wither skull, wolf, zoglin, zombie, zombie horse, zombie villager, zombified piglin",
+    "acacia boat, acacia chest boat, allay, area effect cloud, armadillo, armor stand, arrow, axolotl, bamboo chest raft, bamboo raft, bat, bee, birch boat, birch chest boat, blaze, block display, bogged, breeze, breeze wind charge, camel, cat, cave spider, cherry boat, cherry chest boat, chest minecart, chicken, cod, command block minecart, cow, creaking, creeper, dark oak boat, dark oak chest boat, dolphin, donkey, dragon fireball, drowned, egg, elder guardian, end crystal, ender dragon, ender pearl, enderman, endermite, evoker, evoker fangs, experience bottle, experience orb, eye of ender, falling block, fireball, firework rocket, fishing bobber, fox, frog, furnace minecart, ghast, giant, glow item frame, glow squid, goat, guardian, hoglin, hopper minecart, horse, husk, illusioner, interaction, iron golem, item, item display, item frame, jungle boat, jungle chest boat, leash knot, lightning bolt, llama, llama spit, magma cube, mangrove boat, mangrove chest boat, marker, minecart, mooshroom, mule, oak boat, oak chest boat, ocelot, ominous item spawner, painting, pale oak boat, pale oak chest boat, panda, parrot, phantom, pig, piglin, piglin brute, pillager, player, polar bear, potion, pufferfish, rabbit, ravager, salmon, sheep, shulker, shulker bullet, silverfish, skeleton, skeleton horse, slime, small fireball, sniffer, snow golem, snowball, spawner minecart, spectral arrow, spider, spruce boat, spruce chest boat, squid, stray, strider, tadpole, text display, tnt, tnt minecart, trader llama, trident, tropical fish, turtle, vex, villager, vindicator, wandering trader, warden, wind charge, witch, wither, wither skeleton, wither skull, wolf, zoglin, zombie, zombie horse, zombie villager, zombified piglin",
 
     "pattern_end"
   ],
@@ -474,6 +474,18 @@
   "examples" : "set {_p} to \"Notch\" parsed as an offlineplayer # returns Notch even if they're offline"
 },
 {
+  "id" : "particle",
+  "name" : "Particle",
+  "patterns" : [
+    "angry_villager, ash, block [blockdata/material], block_crumble [blockdata/material], block_marker [blockdata/material], bubble, bubble_column_up, bubble_pop, campfire_cosy_smoke, campfire_signal_smoke, cherry_leaves, cloud, composter, crimson_spore, crit, current_down, damage_indicator, dolphin, dragon_breath, dripping_dripstone_lava, dripping_dripstone_water, dripping_honey, dripping_lava, dripping_obsidian_tear, dripping_water, dust [dust-option], dust_color_transition [dust-transition], dust_pillar [blockdata/material], dust_plume, effect, egg_crack, elder_guardian, electric_spark, enchant, enchanted_hit, end_rod, entity_effect [color], explosion, explosion_emitter, falling_dripstone_lava, falling_dripstone_water, falling_dust [blockdata/material], falling_honey, falling_lava, falling_nectar, falling_obsidian_tear, falling_spore_blossom, falling_water, firework, fishing, flame, flash, glow, glow_squid_ink, gust, gust_emitter_large, gust_emitter_small, happy_villager, heart, infested, instant_effect, item [itemstack/material], item_cobweb, item_slime, item_snowball, landing_honey, landing_lava, landing_obsidian_tear, large_smoke, lava, mycelium, nautilus, note, ominous_spawning, pale_oak_leaves, poof, portal, raid_omen, rain, reverse_portal, scrape, sculk_charge [number(float)], sculk_charge_pop, sculk_soul, shriek [number(int)], small_flame, small_gust, smoke, sneeze, snowflake, sonic_boom, soul, soul_fire_flame, spit, splash, spore_blossom_air, squid_ink, sweep_attack, totem_of_undying, trail [trail], trial_omen, trial_spawner_detection, trial_spawner_detection_ominous, underwater, vault_connection, vibration [vibration], warped_spore, wax_off, wax_on, white_ash, white_smoke, witch",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Represents a particle which can be used in the 'Particle Spawn' effect.\\nSome particles require extra data, these are distinguished by their data type within the square brackets.\\nDustOption, DustTransition and Vibration each have their own functions to build the appropriate data for these particles.\\nNOTE: These are auto-generated and may differ between server versions.",
+  "examples" : "Missing examples."
+},
+{
   "id" : "player",
   "name" : "Player",
   "patterns" : [
@@ -534,6 +546,30 @@
   "examples" : "Missing examples."
 },
 {
+  "id" : "region",
+  "name" : "Region",
+  "patterns" : [
+    ""region name"",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "A region of a regions plugin. Skript currently supports WorldGuard, Factions, GriefPrevention and PreciousStones.\\nPlease note that some regions plugins do not have named regions, some use numerical ids to identify regions, and some may have regions with the same name in different worlds, thus using regions like \"region name\" in scripts may or may not work.",
+  "examples" : "Missing examples."
+},
+{
+  "id" : "registrykey",
+  "name" : "Registry Key",
+  "patterns" : [
+    "attribute registry [<a href='#attribute'>Attribute</a>]<br>biome registry [<a href='#biome'>Biome</a>]<br>block registry [<a href='#material'>Material</a>]<br>cat variant registry [<a href='#cattype'>Cat Type</a>]<br>damage type registry [unsupported]<br>enchantment registry [<a href='#enchantment'>Enchantment</a>]<br>entity type registry [<a href='#entitytype'>Entity Type</a>]<br>frog variant registry [unsupported]<br>item registry [<a href='#material'>Material</a>]<br>mob effect registry [<a href='#potioneffecttype'>Potion Effect Type</a>]<br>particle type registry [<a href='#particle'>Particle</a>]<br>structure registry [unsupported]<br>villager profession registry [unsupported]<br>villager type registry [unsupported]",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Represents the different types of registries in Minecraft.\\nThe names in the square brackets represent the Skript Type the registry represents.\\nSome registries might not be fully supported by Skript yet.\\nThe names are auto generated based on the key for the registry and may change anytime.",
+  "examples" : "Missing examples."
+},
+{
   "id" : "resourcepackstate",
   "name" : "Resource Pack State",
   "patterns" : [
@@ -579,6 +615,18 @@
   ],
   "since" : "2.3",
   "description" : "The spawn reason in a <a href='events.html#spawn'>spawn</a> event.",
+  "examples" : "Missing examples."
+},
+{
+  "id" : "tag",
+  "name" : "Tag",
+  "patterns" : [
+    "Missing patterns.",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Represents a Minecraft tag.\\nSee <a href='https://minecraft.wiki/w/Tag'>McWiki Tag</a> for more information on tags.",
   "examples" : "Missing examples."
 },
 {
@@ -787,6 +835,20 @@ A bell will start resonating five game ticks after being rung, and will continue
   "since" : "2.9.0",
   "description" : "Checks to see if a bell is currently ringing. A bell typically rings for 50 game ticks.",
   "examples" : "target block is ringing"
+},
+{
+  "id" : "CondCanBuild",
+  "name" : "Can Build",
+  "patterns" : [
+    "%<a href='./classes.html#player'>players</a>% (can|(is|are) allowed to) build %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
+"%<a href='./classes.html#player'>players</a>% (can('t|not)|(is|are)(n't| not) allowed to) build %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.0",
+  "description" : "Tests whether a player is allowed to build at a certain location.
+This condition requires a supported <a href='./classes.html#region'>regions</a> plugin to be installed.",
+  "examples" : "command /setblock &amp;lt;material&amp;gt;:\\n    description: set the block at your crosshair to a different type\\n    trigger:\\n        player cannot build at the targeted block:\\n            message \"You do not have permission to change blocks there!\"\\n            stop\\n        set the targeted block to argument"
 },
 {
   "id" : "CondCanFly",
@@ -1583,6 +1645,20 @@ Cannot be used with endermen, use 'entity is [not] an enderman holding &lt;item 
   "examples" : "if chunk at {home::%player's uuid%} is loaded:\\nif chunk 1, 10 in world \"world\" is loaded:\\nif world(\"lobby\") is loaded:"
 },
 {
+  "id" : "CondIsMember",
+  "name" : "Is Member/Owner of Region",
+  "patterns" : [
+    "%<a href='./classes.html#offlineplayer'>offline players</a>% (is|are) ([a] member|[(the|an)] owner) of [[the] region] %<a href='./classes.html#region'>regions</a>%",
+"%<a href='./classes.html#offlineplayer'>offline players</a>% (is|are)(n't| not) ([a] member|[(the|an)] owner) of [[the] region] %<a href='./classes.html#region'>regions</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "Checks whether a player is a member or owner of a particular region.
+This condition requires a supported regions plugin to be installed.",
+  "examples" : "on region enter:\\n    player is the owner of the region\\n    message \"Welcome back to %region%!\"\\n    send \"%player% just entered %region%!\" to all members of the region"
+},
+{
   "id" : "CondIsVectorNormalized",
   "name" : "Is Normalized",
   "patterns" : [
@@ -1856,6 +1932,20 @@ For more info, see <a href='https://minecraft.wiki/w/Slime#.22Slime_chunks.22'>t
   "examples" : "player is swimming"
 },
 {
+  "id" : "CondIsTagged",
+  "name" : "Is Tagged",
+  "patterns" : [
+    "%<a href='./classes.html#object'>objects</a>% (is|are) tagged as %<a href='./classes.html#tag'>tags</a>%",
+"%<a href='./classes.html#object'>objects</a>% (is|are) not tagged as %<a href='./classes.html#tag'>tags</a>%",
+"%<a href='./classes.html#object'>objects</a>% (is|are)n't tagged as %<a href='./classes.html#tag'>tags</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Check if an object is tagged as a specific Minecraft tag.",
+  "examples" : "if type of player's tool is tagged as item registry tag \"minecraft:axes\":\\nif target entity is tagged as entity type registry tag \"minecraft:arthropod\":\\nif player's tool is not tagged as item registry tag \"minecraft:buttons\":"
+},
+{
   "id" : "CondIsTameable",
   "name" : "Is Tameable",
   "patterns" : [
@@ -2035,6 +2125,21 @@ Paper 1.17.1+ is required for non-player entities.",
   "examples" : "on chat:\\n    if message partially matches \"\\d\":\\n        send \"Message contains a digit!\"\\n    if message doesn't match \"[A-Za-z]+\":\\n        send \"Message doesn't only contain letters!\""
 },
 {
+  "id" : "CondMultiple",
+  "name" : "Multiple Conditions",
+  "patterns" : [
+    "\\(&lt;.+&gt;\\) (and|&amp;&amp;) \\(&lt;.+&gt;\\)",
+"\\(&lt;.+&gt;\\) [(or|\\|\\)] \\(&lt;.+&gt;\\)",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Check multiple conditions in one line.
+The first pattern will match if both conditions are true.
+The second pattern will match if either of the conditions are true.",
+  "examples" : "if (type of player's tool = diamond sword) and (name of player's tool = \"Mr Sword\"):\\nif (block below player is dirt) &amp;&amp; (block at player is air):\\nif (block above player is dirt) or (block below player is dirt):\\nif (attacker is a zombie) || (victim is a sheep):\\n\\n# More than 2\\nif ((\"a\" = \"a\") and (\"b\" = \"b\")) and (\"c\" = \"c\"):\\nif ((\"a\" = \"a\") and (\"b\" = \"b\")) or (\"c\" = \"c\"):"
+},
+{
   "id" : "CondPvP",
   "name" : "PvP",
   "patterns" : [
@@ -2046,6 +2151,22 @@ Paper 1.17.1+ is required for non-player entities.",
   "since" : "1.3.4",
   "description" : "Checks the PvP state of a world.",
   "examples" : "PvP is enabled\\nPvP is disabled in \"world\""
+},
+{
+  "id" : "CondRegionContains",
+  "name" : "Region Contains",
+  "patterns" : [
+    "[[the] region] %<a href='./classes.html#region'>regions</a>% contain[s] %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
+"%<a href='./classes.html#location'>locations</a>% (is|are) ([contained] in|part of) [[the] region] %<a href='./classes.html#region'>regions</a>%",
+"[[the] region] %<a href='./classes.html#region'>regions</a>% (do|does)(n't| not) contain %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>%",
+"%<a href='./classes.html#location'>locations</a>% (is|are)(n't| not) (contained in|part of) [[the] region] %<a href='./classes.html#region'>regions</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "Checks whether a location is contained in a particular <a href='./classes.html#region'>region</a>.
+This condition requires a supported regions plugin to be installed.",
+  "examples" : "player is in the region {regions::3}\\n\\non region enter:\\n    region contains {flags.%world%.red}\\n    message \"The red flag is near!\""
 },
 {
   "id" : "CondResourcePack",
@@ -2875,6 +2996,29 @@ but for this to work, the message needs to be sent from a player.",
   "description" : "Opens an inventory to a player. The player can then access and modify the inventory as if it was a chest that he just opened.
 Please note that currently 'show' and 'open' have the same effect, but 'show' will eventually show an unmodifiable view of the inventory in the future.",
   "examples" : "show the victim's inventory to the player\\nopen the player's inventory for the player"
+},
+{
+  "id" : "EffParticle",
+  "name" : "Particle Spawn",
+  "patterns" : [
+    "(spawn|draw|make) %<a href='./classes.html#number'>number</a>% [of] %<a href='./classes.html#particle'>particle</a>% [particle] [using %<a href='./classes.html#object'>object</a>%] %<a href='./classes.html#direction'>directions</a>% %<a href='./classes.html#location'>locations</a>% [with (delta|offset) %<a href='./classes.html#vector'>vector</a>%] [with extra %<a href='./classes.html#number'>number</a>%] [with force] [(for|to) %<a href='./classes.html#player'>players</a>%]",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Spawn a particle. This system is more inline with how Bukkit deals with particles, hence the choices in the pattern.
+Some particles may be affected differently by these values, so let's break them down:
+`first number` = count, how many particles to spawn at once (use '0' if you notice the particle kinda flies away).
+`particle` = the particle to spawn.
+`using` = the data used for this particle (some particles like 'block', 'item' and 'dust' require more data).
+`location` = where you are going to spawn the particle.
+`delta` = a vector with the maximum random offset. The position of each particle will be randomized positively and negatively by the offset parameters on each axis.
+Some particles use the delta to set color/direction if count is set to 0.
+`extra` = the extra data for this particle, depends on the particle used (normally speed).
+`force` = whether to send the particle to players within an extended range and encourage 
+their client to render it regardless of settings (this only works when not using `for player[s]`) (default = false)
+`for %players%` = will only send this particle to a player, not the whole server.",
+  "examples" : "make 3 of item particle using diamond at location of player\\nmake 1 of block particle using dirt at location of target block\\nmake 10 of poof at player with offset vector(2, 2, 2) with extra 0.5\\ndraw 20 of dust using dustOption(blue, 10) at location above target block\\ndraw 1 of dust_color_transition using dustTransition(blue, green, 3) at location of player\\ndraw 1 of vibration using vibration({loc1}, {loc2}, 1 second) at {loc1} with force\\nmake 0 of shriek using 1 above target block of player\\nmake 1 of sculk_charge using 0.1 at {_loc} with force"
 },
 {
   "id" : "EffPathfind",
@@ -3742,7 +3886,7 @@ Do note that other event values, such as 'player', won't work in this section.",
   "id" : "damage",
   "name" : "On Damage",
   "patterns" : [
-    "[on] damag(e|ing) [of %<a href='./classes.html#entitytype'>entity type</a>%] [by %<a href='./classes.html#entitytype'>entity type</a>%]",
+    "[on] damag(e|ing) [of %<a href='./classes.html#entitytype'>entity type</a>/<a href='./classes.html#entitycategory'>entity category</a>%] [by %<a href='./classes.html#entitytype'>entity type</a>/<a href='./classes.html#entitycategory'>entity category</a>%]",
 
     "pattern_end"
   ],
@@ -4699,6 +4843,19 @@ Do note that other event values, such as 'player', won't work in this section.",
   "examples" : "on redstone change:\\n    send \"someone is using redstone\" to console"
 },
 {
+  "id" : "region_enterleave",
+  "name" : "On Region Enter/Leave",
+  "patterns" : [
+    "[on] (enter[ing]|leav(e|ing)|exit[ing]) [of] ([a] region|[[the] region] %<a href='./classes.html#region'>regions</a>%)",
+"[on] region (enter[ing]|leav(e|ing)|exit[ing])",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "Called when a player enters or leaves a <a href='./classes.html#region'>region</a>.\\nThis event requires a supported regions plugin to be installed.",
+  "examples" : "on region exit:\\n    message \"Leaving %region%.\""
+},
+{
   "id" : "resource_pack_request_response",
   "name" : "On Resource Pack Request Response",
   "patterns" : [
@@ -5279,6 +5436,18 @@ For entities, 'Age' represents the time left for them to become adults and it's 
   "examples" : "command /banlist:\\n    trigger:\\n        send all the banned players"
 },
 {
+  "id" : "ExprAllGroups",
+  "name" : "All Groups",
+  "patterns" : [
+    "all groups",
+
+    "pattern_end"
+  ],
+  "since" : "2.2-dev35",
+  "description" : "All the groups a player can have. This expression requires Vault and a compatible permissions plugin to be installed.",
+  "examples" : "command /group &amp;lt;text&amp;gt;:\\n    trigger:\\n        if argument is \"list\":\\n            send \"%all groups%\""
+},
+{
   "id" : "ExprOps",
   "name" : "All Operators",
   "patterns" : [
@@ -5664,6 +5833,19 @@ This number is used to calculate the time required to break each block.",
   "description" : "Blocks relative to other blocks or between other blocks. Can be used to get blocks relative to other blocks or for looping.
 Blocks from/to and between will return a straight line whereas blocks within will return a cuboid.",
   "examples" : "loop blocks above the player:\\nloop blocks between the block below the player and the targeted block:\\nset the blocks below the player, the victim and the targeted block to air\\nset all blocks within {loc1} and {loc2} to stone\\nset all blocks within chunk at player to air"
+},
+{
+  "id" : "ExprBlocksInRegion",
+  "name" : "Blocks in Region",
+  "patterns" : [
+    "[(all|the)] blocks (in|of) [[the] region[s]] %<a href='./classes.html#region'>regions</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "All blocks in a <a href='./classes.html#region'>region</a>.
+This expression requires a supported regions plugin to be installed.",
+  "examples" : "loop all blocks in the region {arena.%{faction.%player%}%}:\\n    clear the loop-block"
 },
 {
   "id" : "ExprBookAuthor",
@@ -6703,6 +6885,20 @@ Thus you may wish to use the event block in this case (e.g. <code>the fuel slot 
   "examples" : "set gravity of player off"
 },
 {
+  "id" : "ExprGroup",
+  "name" : "Group",
+  "patterns" : [
+    "[the] group[s] of %<a href='./classes.html#offlineplayer'>offline players</a>%",
+"%<a href='./classes.html#offlineplayer'>offline players</a>%'[s] group[s]",
+
+    "pattern_end"
+  ],
+  "since" : "2.2-dev35",
+  "description" : "The primary group or all groups of a player. This expression requires Vault and a compatible permissions plugin to be installed.
+If you have LuckPerms, ensure you have vault integration enabled in the luck perms configurations.",
+  "examples" : "on join:\\n    broadcast \"%group of player%\" # this is the player's primary group\\n    broadcast \"%groups of player%\" # this is all of the player's groups"
+},
+{
   "id" : "ExprHanging",
   "name" : "Hanging Entity/Remover",
   "patterns" : [
@@ -7141,13 +7337,28 @@ If multiple strings are passed, each of them will be a separate line in the lore
   "id" : "ExprItemStackCreate",
   "name" : "ItemStack Create",
   "patterns" : [
-    "[new] item[ ]stack[s] (of|from) [%<a href='./classes.html#number'>number</a>% [of]] %<a href='./classes.html#material'>materials</a>%",
+    "[new] item[ ]stack (of|from) [%<a href='./classes.html#number'>number</a>% [of]] %<a href='./classes.html#material'>material</a>%[\\[&lt;.+&gt;\\]]",
 
     "pattern_end"
   ],
   "since" : "3.0.0",
-  "description" : "Create a new item stack.",
-  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel"
+  "description" : "Create a new item stack.
+Supports Minecraft's command item format.
+See <a href='https://minecraft.wiki/w/Data_component_format'>McWiki Data Component Format</a> for more details",
+  "examples" : "set {_i} to itemstack of 10 of diamond\\nset {_i} to itemstack of netherite shovel\\nset {_item} to itemstack of stick[minecraft:consumable={},food={saturation:1,nutrition:2}] # Will create a stick you can eat\\nset {_item} to itemstack of experience_bottle[enchantment_glint_override=false] # Will create an xp bottle without glint\\nset {_item} to itemstack of apple[!food,!consumable] # Will create an apple that cannot be consumed"
+},
+{
+  "id" : "ExprItemStackWithFireResistance",
+  "name" : "ItemStack with Fire Resistance",
+  "patterns" : [
+    "%<a href='./classes.html#itemstack'>item stack</a>% with[out] fire[ ]resistance",
+"fire resistant %<a href='./classes.html#itemstack'>item stack</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.9.0",
+  "description" : "Creates a copy of an item with (or without) fire resistance.",
+  "examples" : "set {_x} to itemstack of diamond sword with fire resistance\\nequip player with 1 of netherite helmet without fire resistance\\ndrop fire resistant itemstack of stone at player"
 },
 {
   "id" : "ExprItemsIn",
@@ -7690,6 +7901,19 @@ Resetting will reset back to the vanilla Minecraft value.",
   "examples" : "on right click on minecart:\\n    set derailed velocity of event-entity to vector 2, 10, 2"
 },
 {
+  "id" : "ExprBalance",
+  "name" : "Money",
+  "patterns" : [
+    "[the] (money|balance|[bank] account) of %<a href='./classes.html#offlineplayer'>offline players</a>%",
+"%<a href='./classes.html#offlineplayer'>offline players</a>%'[s] (money|balance|[bank] account)",
+
+    "pattern_end"
+  ],
+  "since" : "2.0, 2.5 (offline players)",
+  "description" : "How much virtual money a player has (can be changed).",
+  "examples" : "message \"You have $%player's money%\"\\nremove 20 from the player's balance\\nadd 200 to the player's account"
+},
+{
   "id" : "ExprMoonPhase",
   "name" : "Moon Phase",
   "patterns" : [
@@ -8163,6 +8387,19 @@ When adding a potion effect type (rather than a potion effect), it will default 
   "examples" : "set {_p::*} to active potion effects of player\\nclear all the potion effects of player\\nclear all the potion effects of player's tool\\nadd potion effects of player to potion effects of player's tool\\nadd speed to potion effects of target entity\\nremove speed and night vision from potion effects of player"
 },
 {
+  "id" : "ExprPrefixSuffix",
+  "name" : "Prefix/Suffix",
+  "patterns" : [
+    "[the] [chat] (prefix|suffix) of %<a href='./classes.html#player'>players</a>%",
+"%<a href='./classes.html#player'>players</a>%'[s] [chat] (prefix|suffix)",
+
+    "pattern_end"
+  ],
+  "since" : "2.0",
+  "description" : "The prefix or suffix as defined in the server's chat plugin.",
+  "examples" : "on chat:\\n    cancel event\\n    broadcast \"%player's prefix%%player's display name%%player's suffix%: %message%\" to the player's world\\n\\nset the player's prefix to \"[&amp;lt;red&amp;gt;Admin&lt;reset&gt;] \""
+},
+{
   "id" : "ExprProjectileCriticalState",
   "name" : "Projectile Critical State",
   "patterns" : [
@@ -8308,6 +8545,59 @@ Note that this is not guaranteed to give same results on all servers.",
   "since" : "2.5",
   "description" : "Power of a redstone block",
   "examples" : "if redstone power of targeted block is 15:\\n    send \"This block is very powerful!\""
+},
+{
+  "id" : "ExprRegion",
+  "name" : "Region",
+  "patterns" : [
+    "[the] [event-]region",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "The <a href='./classes.html#region'>region</a> involved in an event.
+This expression requires a supported regions plugin to be installed.",
+  "examples" : "on region enter:\\n    region is {forbidden region}\\n    cancel the event"
+},
+{
+  "id" : "ExprMembersOfRegion",
+  "name" : "Region Members & Owners",
+  "patterns" : [
+    "[(all|the)] (members|owner[s]) of [[the] region[s]] %<a href='./classes.html#region'>regions</a>%",
+"[[the] region[s]] %<a href='./classes.html#region'>regions</a>%'[s] (members|owner[s])",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "A list of members or owners of a <a href='./classes.html#region'>region</a>.
+This expression requires a supported regions plugin to be installed.",
+  "examples" : "on entering of a region:\\n    message \"You're entering %region% whose owners are %owners of region%\""
+},
+{
+  "id" : "ExprRegionsAt",
+  "name" : "Regions At",
+  "patterns" : [
+    "[the] region[(s)] %<a href='./classes.html#direction'>direction</a>% %<a href='./classes.html#location'>locations</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "2.1",
+  "description" : "All <a href='./classes.html#region'>regions</a> at a particular <a href='./classes/#location'>location</a>.
+This expression requires a supported regions plugin to be installed.",
+  "examples" : "On click on a sign:\\n    line 1 of the clicked block is \"[region info]\"\\n    set {_regions::*} to regions at the clicked block\\n    if {_regions::*} is empty:\\n        message \"No regions exist at this sign.\"\\n    else:\\n        message \"Regions containing this sign: &amp;lt;gold&amp;gt;%{_regions::*}%&lt;r&gt;.\""
+},
+{
+  "id" : "ExprRegistryValues",
+  "name" : "Registry Values",
+  "patterns" : [
+    "registry values of %<a href='./classes.html#registrykey'>registry key</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Returns a list of all values that belong to a registry.
+Registries cannot be changed via Skript.",
+  "examples" : "set {_values::*} to registry values of item registry\\nloop registry values of biome registry:"
 },
 {
   "id" : "ExprRemainingAir",
@@ -8704,6 +8994,35 @@ Please note that changing a player's speed will change their FOV just like potio
   "since" : "2.2-dev36",
   "description" : "Returns the 3 most recent TPS readings, like the /tps command. This expression is only supported on some server software (PaperSpigot).",
   "examples" : "broadcast \"%tps%\""
+},
+{
+  "id" : "ExprTag",
+  "name" : "Tag",
+  "patterns" : [
+    "%<a href='./classes.html#registrykey'>registry key</a>% tag %<a href='./classes.html#string'>text</a>%",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Represents a Minecraft tag.
+See <a href='https://minecraft.wiki/w/Tag'>McWiki Tag</a> for more information on tags.
+`registrykey` = Refers to the type of registry this tag is from.
+`string` = You can use the `minecraft:` namespace and/or namespaces from DataPacks. If you omit this value it defaults to 'minecraft'.",
+  "examples" : "set {_tag} to item registry tag \"minecraft:axes\"\\nset {_tag} to block registry tag \"mineable/pickaxe\"\\nset {_tag} to block reigstry tag \"my_pack:some_item_tag\"\\nset {_tag} to enchantment registry tag \"treasure\""
+},
+{
+  "id" : "ExprTagValues",
+  "name" : "Tag Values",
+  "patterns" : [
+    "tag values of %<a href='./classes.html#tag'>tag</a>%",
+"%<a href='./classes.html#tag'>tag</a>%'[s] tag values",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Returns the values of a tag. This could be entity types, items/blocks (materials), enchantments, etc.
+Tags and their values are created by Minecraft and DataPacks, and the values cannot be edited via Skript.",
+  "examples" : "loop tag values of block registry tag \"minecraft:all_signs\":\\nif tag values of item registry tag \"minecraft:banners\" contains material of player's tool:\\nif tag values of entity type registry tag \"arthropod\" contains type of target entity:"
 },
 {
   "id" : "ExprTamer",
@@ -9331,19 +9650,6 @@ The whitelist can be enabled or disabled by setting the whitelist to true or fal
   "examples" : "set the whitelist to false\\nadd all players to whitelist\\nreset the whitelist"
 },
 {
-  "id" : "ExprWithFireResistance",
-  "name" : "With Fire Resistance",
-  "patterns" : [
-    "%<a href='./classes.html#itemstack'>item stack</a>% with[out] fire[ ]resistance",
-"fire resistant %<a href='./classes.html#itemstack'>item stack</a>%",
-
-    "pattern_end"
-  ],
-  "since" : "2.9.0",
-  "description" : "Creates a copy of an item with (or without) fire resistance.",
-  "examples" : "set {_x} to diamond sword with fire resistance\\nequip player with netherite helmet without fire resistance\\ndrop fire resistant stone at player"
-},
-{
   "id" : "ExprWorld",
   "name" : "World",
   "patterns" : [
@@ -9611,6 +9917,30 @@ Only Paper 1.19+ users may directly change the yaw/pitch of players.",
   "examples" : "date(2014, 10, 1) # 0:00, 1st October 2014\\ndate(1990, 3, 5, 14, 30) # 14:30, 5th May 1990\\ndate(1999, 12, 31, 23, 59, 59, 999, -3*60, 0) # almost year 2000 in parts of Brazil (-3 hours offset, no DST)"
 },
 {
+  "id" : "dustOption",
+  "name" : "dustOption",
+  "patterns" : [
+    "dustOption(color: color, size: number)",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Creates a new dust option to be used with 'dust' particle. Color can either be a regular color or an RGB color using\\nthe rgb() function. Size is the size the particle will be.",
+  "examples" : "set {_c} to dustOption(red, 1.5)\\nset {_c} to dustOption(rgb(1, 255, 1), 3)"
+},
+{
+  "id" : "dustTransition",
+  "name" : "dustTransition",
+  "patterns" : [
+    "dustTransition(fromColor: color, toColor: color, size: number)",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Creates a new dust transition to be used with 'dust_color_transition' particle.\\nColor can either be a regular color or an RGB color using Skript's rgb() function.\\nSize is the size the particle will be. Requires MC 1.17+",
+  "examples" : "set {_d} to dustTransition(red, green, 10)\\nset {_d} to dustTransition(blue, rgb(1,1,1), 5)"
+},
+{
   "id" : "enchantmentOffer",
   "name" : "enchantmentOffer",
   "patterns" : [
@@ -9839,6 +10169,18 @@ Only Paper 1.19+ users may directly change the yaw/pitch of players.",
   "examples" : "tan(0) = 0\\ntan(45) = 1\\ntan(89.99) = 5729.5779"
 },
 {
+  "id" : "trail",
+  "name" : "trail",
+  "patterns" : [
+    "trail(target: location, color: color, duration: timespan)",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Creates a new trail to be used with 'trail' particle.\\nTakes in a location for the target (where the trail heads to), the color and duration.\\nRequires Minecraft 1.21.4+",
+  "examples" : "set {_trail} to trail(location of target block, blue, 1 second)\\nmake 10 of trail using {_trail} at location of player"
+},
+{
   "id" : "vector",
   "name" : "vector",
   "patterns" : [
@@ -9849,6 +10191,18 @@ Only Paper 1.19+ users may directly change the yaw/pitch of players.",
   "since" : "2.2-dev23",
   "description" : "Creates a new vector, which can be used with various expressions, effects and functions.",
   "examples" : "vector(0, 0, 0)"
+},
+{
+  "id" : "vibration",
+  "name" : "vibration",
+  "patterns" : [
+    "vibration(to: location, arrivalTime: timespan)",
+
+    "pattern_end"
+  ],
+  "since" : "INSERT VERSION",
+  "description" : "Creates a new vibration to be used with 'vibration' particle.\\nTO = the destination location the particle will travel to.\\nARRIVAL TIME = the time it will take to arrive at the destination location.",
+  "examples" : "set {_v} to vibration({loc}, 10 seconds)"
 },
 {
   "id" : "world",
