@@ -4,9 +4,12 @@ Welcome to the SkriptDev repo.
 
 # HySkript: 
 
-## Docs:
-[**Latest Docs**](https://skriptdev.github.io/docs/HySkript/latest/)    
-[**Archive Docs**](https://skriptdev.github.io/docs/HySkript/) 
+## JavaDocs:
+[**Latest Javadocs**](https://skriptdev.github.io/docs/HySkript/latest/)    
+[**Archive Javadocs**](https://skriptdev.github.io/docs/HySkript/) 
+
+## HySkript Docs:
+[**Latest HySkript Docs**](https://github.com/SkriptDev/HySkript/wiki)
 
 ## Downloads:
 [**Latest Download**](https://github.com/SkriptDev/HySkript/releases/latest)      
@@ -14,3 +17,12 @@ Welcome to the SkriptDev repo.
 
 ## Repo:
 [**HySkript GitHub Repo**](https://github.com/SkriptDev/HySkript)
+
+# Skript-Parser:
+
+## JavaDocs:
+[**Latest Javadocs**](https://skriptdev.github.io/docs/skript-parser/latest/)    
+[**Archive Javadocs**](https://skriptdev.github.io/docs/skript-parser/)
+
+## Repo:
+[**Skript-Parser GitHub Repo**](https://github.com/SkriptDev/skript-parser)
