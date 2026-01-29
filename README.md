@@ -2,20 +2,15 @@
 
 Welcome to the SkriptDev repo.
 
-# Skript-Three 
+# HySkript: 
 
 ## Docs:
-[**Latest Docs**](https://skriptdev.github.io/docs/Skript/latest/)    
-[**Archive Docs**](https://skriptdev.github.io/docs/Skript/) 
+[**Latest Docs**](https://skriptdev.github.io/docs/HySkript/latest/)    
+[**Archive Docs**](https://skriptdev.github.io/docs/HySkript/) 
 
 ## Downloads:
-[**Latest Download**](https://github.com/SkriptDev/Skript/releases/latest)      
-[**All Downloads**](https://github.com/SkriptDev/Skript/releases/)
+[**Latest Download**](https://github.com/SkriptDev/HySkript/releases/latest)      
+[**All Downloads**](https://github.com/SkriptDev/HySkript/releases/)
 
 ## Repo:
-[**Skript-Three GitHub Repo**](https://github.com/SkriptDev/Skript)
-
-## Popular Addons:
-These addons are made to work with Skript-Three    
-[**SkBee**](https://github.com/SkriptDev/SkBee)    
-[**Skript-Reflect**](https://github.com/SkriptDev/skript-reflect)
+[**HySkript GitHub Repo**](https://github.com/SkriptDev/HySkript)
