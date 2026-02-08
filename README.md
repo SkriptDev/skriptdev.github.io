@@ -2,14 +2,16 @@
 
 Welcome to the SkriptDev repo.
 
-# HySkript: 
+# HySkript:
+
+## HySkript Docs:
+Docs are available on SkriptHub:  
+[![SkriptHubViewTheDocs](http://skripthub.net/static/addon/ViewTheDocsButton.png)](https://skripthub.net/hyskript/docs/?addon=HySkript)
+
 
 ## JavaDocs:
 [**Latest Javadocs**](https://skriptdev.github.io/docs/HySkript/latest/)    
-[**Archive Javadocs**](https://skriptdev.github.io/docs/HySkript/) 
-
-## HySkript Docs:
-[**Latest HySkript Docs**](https://github.com/SkriptDev/HySkript/wiki)
+[**Archive Javadocs**](https://skriptdev.github.io/docs/HySkript/)
 
 ## Downloads:
 [**Latest Download**](https://github.com/SkriptDev/HySkript/releases/latest)      
