@@ -2,6 +2,7 @@ com.github.skriptdev.skript.api.hytale
 com.github.skriptdev.skript.api.skript
 com.github.skriptdev.skript.api.skript.addon
 com.github.skriptdev.skript.api.skript.command
+com.github.skriptdev.skript.api.skript.config
 com.github.skriptdev.skript.api.skript.docs
 com.github.skriptdev.skript.api.skript.event
 com.github.skriptdev.skript.api.skript.registration
