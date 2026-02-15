@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(document).ready(function () {
-        $.get("https://api.github.com/repos/ShaneBeee/shanebeee.github.io/contents/docs/skript-parser/", function (data) {
+        $.get("https://api.github.com/repos/SkriptDev/skriptdev.github.io/contents/docs/skript-parser/", function (data) {
             for (let dir of data) {
                 if (dir.name == "index.html") continue;
                 $("#list").prepend(`<p><a href="${dir.name}">${dir.name}</a></p>`);
