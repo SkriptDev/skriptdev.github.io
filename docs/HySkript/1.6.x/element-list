@@ -1,0 +1,13 @@
+com.github.skriptdev.skript.api.hytale.objects
+com.github.skriptdev.skript.api.hytale.utils
+com.github.skriptdev.skript.api.skript
+com.github.skriptdev.skript.api.skript.addon
+com.github.skriptdev.skript.api.skript.command
+com.github.skriptdev.skript.api.skript.config
+com.github.skriptdev.skript.api.skript.docs
+com.github.skriptdev.skript.api.skript.event
+com.github.skriptdev.skript.api.skript.registration
+com.github.skriptdev.skript.api.skript.testing
+com.github.skriptdev.skript.api.skript.variables
+com.github.skriptdev.skript.api.utils
+com.github.skriptdev.skript.plugin
